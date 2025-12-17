@@ -1,6 +1,6 @@
 LTspice 24.1.9 for Windows
-Circuit: C:\Users\German\Documents\equipo_medicion_ensayo_celdas\Simulaciones\modulo_descarga\modulo_carga_descarga_ac_imp.net
-Start Time: Wed Dec 17 16:17:27 2025
+Circuit: C:\Users\German\Documents\equipo_medicion_ensayo_celdas\Simulaciones\modulo_carga_descarga_ac_imp.net
+Start Time: Wed Dec 17 16:21:24 2025
 solver = Normal
 Maximum thread count: 12
 tnom = 27
@@ -27,56 +27,51 @@ vernier = 0.037037
 vernier = 0.0493827
 Gmin = 0.00983024
 vernier = 0.0658435
-vernier = 0.0329218
-vernier = 0.0164609
-Gmin = 0.00887595
-vernier = 0.00823044
-vernier = 0.00411522
-vernier = 0.00205761
-vernier = 0.00102881
-vernier = 0.000514403
+vernier = 0.0877914
+Gmin = 0.0084063
+vernier = 0.117055
+Gmin = 0.00652871
+vernier = 0.156073
+vernier = 0.0780367
+vernier = 0.0390184
+Gmin = 0.00539004
+vernier = 0.0195092
+vernier = 0.00975459
+vernier = 0.0048773
+Gmin = 0.00538331
+vernier = 0.00243865
+vernier = 0.00121932
+vernier = 0.000609662
+vernier = 0.000457246
 Gmin = 0
 Gmin stepping failed
 
 Starting source stepping with srcstepmethod=0
 Source Step = 3.0303%
-Source Step = 18.75%
-Source Step = 20.6439%
-Source Step = 22.5379%
-Source Step = 24.4318%
-Source Step = 26.3258%
+Source Step = 19.8864%
+Source Step = 21.7803%
+Source Step = 23.6742%
+Source Step = 25.5682%
+Source Step = 27.4621%
+Source Step = 29.3561%
 vernier = 0.09375
-Source Step = 28.4091%
-Source Step = 31.25%
-Source Step = 34.0909%
-Source Step = 36.9318%
-Source Step = 39.7727%
+Source Step = 32.197%
+Source Step = 35.0379%
+Source Step = 37.8788%
+Source Step = 40.7197%
+Source Step = 43.5606%
 vernier = 0.140625
-Source Step = 42.7557%
-Source Step = 47.017%
-Source Step = 51.2784%
-Source Step = 55.5398%
-Source Step = 59.8011%
-Source Step = 64.0625%
+Source Step = 47.6799%
+Source Step = 51.9413%
+Source Step = 56.2027%
+Source Step = 60.464%
+Source Step = 64.7254%
 vernier = 0.210938
-Source Step = 70.4545%
-Source Step = 76.8466%
-Source Step = 82.12%
-Source Step = 83.718%
-Source Step = 84.4371%
-Source Step = 84.8366%
-Source Step = 85.2362%
-Source Step = 85.6357%
-Source Step = 86.0352%
-vernier = 0.0197754
-Source Step = 86.5345%
-Source Step = 87.1338%
-Source Step = 87.733%
-Source Step = 88.3323%
-Source Step = 88.9316%
-vernier = 0.0296631
-Source Step = 89.6507%
-Source Step = 89.9484%
+Source Step = 70.6913%
+Source Step = 77.0833%
+Source Step = 83.4754%
+Source Step = 89.8674%
+Source Step = 89.9373%
 Starting source stepping with srcstepmethod=1
 Source Step = 3.0303%
 Source Step = 33.3333%
@@ -85,13 +80,13 @@ Source Step = 88.6364%
 vernier = 0.0625
 Source stepping failed
 
-Pseudo transient terminated at 103.755 s, solution accepted ready or not!
-Total elapsed time: 5.854 seconds.
+Pseudo Transient succeeded in finding the operating point at 2.26939 s.
+Total elapsed time: 9.133 seconds.
 
 Files loaded:
-C:\Users\German\Documents\equipo_medicion_ensayo_celdas\Simulaciones\modulo_descarga\modulo_carga_descarga_ac_imp.net
+C:\Users\German\Documents\equipo_medicion_ensayo_celdas\Simulaciones\modulo_carga_descarga_ac_imp.net
 C:\Users\German\AppData\Local\LTspice\lib\cmp\standard.dio
 C:\Users\German\AppData\Local\LTspice\lib\cmp\standard.bjt
-C:\Users\German\Documents\equipo_medicion_ensayo_celdas\Simulaciones\modulo_descarga\OPAx188.lib
-C:\Users\German\Documents\equipo_medicion_ensayo_celdas\Simulaciones\modulo_descarga\lmx24_lm2902.lib
+C:\Users\German\Documents\equipo_medicion_ensayo_celdas\Simulaciones\OPAx188.lib
+C:\Users\German\Documents\equipo_medicion_ensayo_celdas\Simulaciones\lmx24_lm2902.lib
 
