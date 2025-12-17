@@ -1,6 +1,0 @@
-(sym_lib_table
-  (version 7)
-  (lib (name "BQ24780S")(type "KiCad")(uri "${KIPRJMOD}/libraries/bq24780s/KiCADv6/2025-06-09_20-12-28.kicad_sym")(options "")(descr ""))
-  (lib (name "CSD17308Q3")(type "KiCad")(uri "${KIPRJMOD}/libraries/CSD17308Q3/2025-07-19_19-17-32.kicad_sym")(options "")(descr ""))
-  (lib (name "TPS3898ADRY")(type "KiCad")(uri "${KIPRJMOD}/libraries/TPS3898ADRYT/KiCADv6/2025-07-21_01-03-09.kicad_sym")(options "")(descr ""))
-)
