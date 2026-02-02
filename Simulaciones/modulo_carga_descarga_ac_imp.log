@@ -1,6 +1,6 @@
 LTspice 24.1.9 for Windows
 Circuit: C:\Users\German\Documents\equipo_medicion_ensayo_celdas\Simulaciones\modulo_carga_descarga_ac_imp.net
-Start Time: Wed Dec 17 16:41:32 2025
+Start Time: Sun Feb  1 18:41:53 2026
 solver = Normal
 Maximum thread count: 12
 tnom = 27
@@ -38,8 +38,8 @@ Gmin = 0.00539004
 vernier = 0.0195092
 vernier = 0.00975459
 vernier = 0.0048773
-Gmin = 0.00538331
 vernier = 0.00243865
+Gmin = 0.00539645
 vernier = 0.00121932
 vernier = 0.000609662
 vernier = 0.000457246
@@ -48,30 +48,17 @@ Gmin stepping failed
 
 Starting source stepping with srcstepmethod=0
 Source Step = 3.0303%
-Source Step = 19.8864%
-Source Step = 21.7803%
-Source Step = 23.6742%
-Source Step = 25.5682%
-Source Step = 27.4621%
-Source Step = 29.3561%
-vernier = 0.09375
-Source Step = 32.197%
-Source Step = 35.0379%
-Source Step = 37.8788%
-Source Step = 40.7197%
-Source Step = 43.5606%
-vernier = 0.140625
-Source Step = 47.6799%
-Source Step = 51.9413%
-Source Step = 56.2027%
-Source Step = 60.464%
-Source Step = 64.7254%
-vernier = 0.210938
-Source Step = 70.6913%
-Source Step = 77.0833%
-Source Step = 83.4754%
-Source Step = 89.8674%
-Source Step = 89.9373%
+Source Step = 21.2121%
+Source Step = 28.7879%
+Source Step = 36.3636%
+Source Step = 43.9394%
+Source Step = 51.5152%
+vernier = 0.375
+Source Step = 60.2273%
+Source Step = 71.5909%
+Source Step = 82.9545%
+Source Step = 89.7905%
+vernier = 0.00146484
 Starting source stepping with srcstepmethod=1
 Source Step = 3.0303%
 Source Step = 33.3333%
@@ -80,8 +67,8 @@ Source Step = 88.6364%
 vernier = 0.0625
 Source stepping failed
 
-Pseudo Transient succeeded in finding the operating point at 2.26939 s.
-Total elapsed time: 7.716 seconds.
+Pseudo Transient succeeded in finding the operating point at 2.25781 s.
+Total elapsed time: 7.222 seconds.
 
 Files loaded:
 C:\Users\German\Documents\equipo_medicion_ensayo_celdas\Simulaciones\modulo_carga_descarga_ac_imp.net
