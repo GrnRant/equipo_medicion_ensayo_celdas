@@ -1,6 +1,6 @@
 LTspice 24.1.9 for Windows
 Circuit: C:\Users\German\Documents\equipo_medicion_ensayo_celdas\Simulaciones\modulo_carga_descarga_ac_imp.net
-Start Time: Sun Feb  1 18:41:53 2026
+Start Time: Tue Feb 17 16:52:33 2026
 solver = Normal
 Maximum thread count: 12
 tnom = 27
@@ -67,8 +67,8 @@ Source Step = 88.6364%
 vernier = 0.0625
 Source stepping failed
 
-Pseudo Transient succeeded in finding the operating point at 2.25781 s.
-Total elapsed time: 7.222 seconds.
+Pseudo Transient succeeded in finding the operating point at 17.69 s.
+Total elapsed time: 16.212 seconds.
 
 Files loaded:
 C:\Users\German\Documents\equipo_medicion_ensayo_celdas\Simulaciones\modulo_carga_descarga_ac_imp.net

@@ -1,0 +1,10 @@
+../Core/Src/main.c:64:6:calcsin	2
+../Core/Src/main.c:75:6:MCP4821_GenerateSine	9
+../Core/Src/main.c:119:5:main	1
+../Core/Src/main.c:184:6:SystemClock_Config	4
+../Core/Src/main.c:234:13:MX_SPI1_Init	2
+../Core/Src/main.c:274:13:MX_TIM2_Init	4
+../Core/Src/main.c:319:13:MX_USART2_UART_Init	2
+../Core/Src/main.c:352:13:MX_DMA_Init	1
+../Core/Src/main.c:370:13:MX_GPIO_Init	1
+../Core/Src/main.c:402:6:Error_Handler	1
