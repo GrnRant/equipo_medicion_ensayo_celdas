@@ -60,8 +60,8 @@ all: main-build
 main-build: pruebas_eq_med_celdas.elf secondary-outputs
 
 # Tool invocations
-pruebas_eq_med_celdas.elf pruebas_eq_med_celdas.map: $(OBJS) $(USER_OBJS) C:\Users\German\STM32CubeIDE\workspace-1.18.1\pruebas_eq_med_celdas\STM32L476RGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "pruebas_eq_med_celdas.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\German\STM32CubeIDE\workspace-1.18.1\pruebas_eq_med_celdas\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pruebas_eq_med_celdas.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+pruebas_eq_med_celdas.elf pruebas_eq_med_celdas.map: $(OBJS) $(USER_OBJS) C:\Users\German\Documents\equipo_medicion_ensayo_celdas\pruebas_eq_med_celdas\STM32L476RGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "pruebas_eq_med_celdas.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\German\Documents\equipo_medicion_ensayo_celdas\pruebas_eq_med_celdas\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pruebas_eq_med_celdas.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

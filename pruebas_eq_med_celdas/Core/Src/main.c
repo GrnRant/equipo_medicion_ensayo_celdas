@@ -26,7 +26,10 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-
+typedef enum {
+    MCP4822_CH_A = 0,
+    MCP4822_CH_B = 1
+} MCP4822_Channel;
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -36,9 +39,7 @@
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
-#define PI 3.1415926
-#define MCP4821_MAX_CODE 4095.0f
-#define MCP4821_VREF     2.048f   // Internal reference for MCP4821
+#define MCP482X_VREF 2.048f
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -50,7 +51,6 @@ TIM_HandleTypeDef htim2;
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
-uint32_t sine_val[100];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -61,49 +61,64 @@ static void MX_USART2_UART_Init(void);
 static void MX_TIM2_Init(void);
 static void MX_SPI1_Init(void);
 /* USER CODE BEGIN PFP */
-void calcsin ()
+void MCP4822_FillSineDMA(uint16_t *buffer,
+                                uint32_t size,
+                                float amplitude_volts,
+                                float offset_volts,
+                                uint8_t ga,
+                                uint8_t channel)
 {
-	for (int i=0; i<100; i++)
-	{
-		float temp = (0.1*sin(i*2*PI/100) + 0.15);
-		sine_val[i] = (temp*(4096/3.3));
-	}
-}
+    if (!buffer || size == 0) return;
 
-// GA = 1 -> 1x (0..2.048V)
-// GA = 0 -> 2x (0..4.096V)
-void MCP4821_GenerateSine(uint16_t *buffer,
-                          uint32_t buffer_size,
-                          float amplitude_volts,
-                          uint8_t ga){
-    if (!buffer || buffer_size == 0) return;
+    float fullscale = ga ? MCP482X_VREF : (2.0f * MCP482X_VREF);
 
-    float fullscale = ga ? MCP4821_VREF : (2.0f * MCP4821_VREF);
-    float mid_voltage = fullscale * 0.5f;
+    // Limitar amplitud para no saturar
+    float max_amp = offset_volts;
+    if ((fullscale - offset_volts) < max_amp)
+        max_amp = fullscale - offset_volts;
 
-    if (amplitude_volts > mid_voltage)
-        amplitude_volts = mid_voltage;
+    if (amplitude_volts > max_amp)
+        amplitude_volts = max_amp;
 
-    mid_voltage = amplitude_volts;
-    for (uint32_t i = 0; i < buffer_size; i++)
+    uint16_t config = 0;
+    config |= (channel ? (1 << 15) : 0); // A/B
+    config |= (1 << 14);                 // BUF
+    config |= (ga ? (1 << 13) : 0);      // GA
+    config |= (1 << 12);                 // SHDN
+
+    for (uint32_t i = 0; i < size; i++)
     {
-        float phase = 2.0f * M_PI * ((float)i / (float)buffer_size);
+        float phase = 2.0f * M_PI * ((float)i / (float)size);
         float s = sinf(phase);
 
-        float voltage = mid_voltage + s * amplitude_volts;
+        float voltage = offset_volts + s * amplitude_volts;
 
         if (voltage < 0.0f) voltage = 0.0f;
         if (voltage > fullscale) voltage = fullscale;
 
-        uint16_t code = (uint16_t)((voltage / fullscale) * MCP4821_MAX_CODE);
+        uint16_t code = (uint16_t)((voltage / fullscale) * 4095.0f);
 
-        uint16_t frame = 0;
-        frame |= (ga ? (1 << 13) : 0);   // GA bit
-        frame |= (1 << 12);             // SHDN = active
-        frame |= (code & 0x0FFF);        // Data
-
-        buffer[i] = frame;
+        buffer[i] = config | (code & 0x0FFF);
     }
+    HAL_SPI_Transmit_DMA(&hspi1, (uint8_t*)buffer, size);
+}
+
+// --- Set voltage function ---
+void MCP4822_SetVoltage(MCP4822_Channel ch, float voltage)
+{
+    if (voltage < 0.0f) voltage = 0.0f;
+    if (voltage > 2.048f) voltage = 2.048f;
+
+    uint16_t code = (uint16_t)((voltage / 2.048f) * 4095.0f);
+
+    uint16_t command = 0;
+    command |= (ch << 15);         // <-- Channel select
+    command |= (0 << 14);          // Unbuffered
+    command |= (1 << 13);          // Gain = 1x
+    command |= (1 << 12);          // Active
+    command |= (code & 0x0FFF);
+
+    HAL_SPI_Transmit(&hspi1, (uint8_t *)&command, 1, HAL_MAX_DELAY);
 }
 /* USER CODE END PFP */
 
@@ -151,7 +166,6 @@ int main(void)
 
 //  HAL_TIM_Base_Start(&htim2);
 //
-//  calcsin();
 //
 //  HAL_DAC_Start(&hdac1, DAC_CHANNEL_2);
 //  HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_12B_R, dac_val_1);
@@ -159,11 +173,17 @@ int main(void)
 //  HAL_DAC_Start_DMA(&hdac1, DAC1_CHANNEL_1, sine_val, 100, DAC_ALIGN_12B_R);
 //  HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_2, DAC_ALIGN_12B_R, dac_val_2);
 
-  uint16_t mcp4821_sine[139];
+  uint16_t dac_buffer[139];
+//
+//  MCP4821_GenerateSine(dac_buffer, sizeof(dac_buffer)/sizeof(uint16_t), 0.1, 1);
+//
+//  HAL_SPI_Transmit_DMA(&hspi1, (uint8_t *) dac_buffer, sizeof(dac_buffer)/sizeof(uint16_t));
 
-  MCP4821_GenerateSine(mcp4821_sine, sizeof(mcp4821_sine)/sizeof(uint16_t), 0.1, 1);
-
-  HAL_SPI_Transmit_DMA(&hspi1, (uint8_t *) mcp4821_sine, sizeof(mcp4821_sine)/sizeof(uint16_t));
+  //MCP4822_SetVoltage(MCP4822_CH_A ,1.24);
+  MCP4822_SetVoltage(MCP4822_CH_B , 2);
+  HAL_Delay(100);
+  MCP4822_FillSineDMA(dac_buffer, sizeof(dac_buffer)/sizeof(uint16_t), 0.08f, 1.1f, 1, MCP4822_CH_A);
+  HAL_Delay(5000);
   /* USER CODE END 2 */
 
   /* Infinite loop */
