@@ -2,4 +2,5 @@
   (version 7)
   (lib (name "CSD17308Q3")(type "KiCad")(uri "${KIPRJMOD}/libraries/CSD17308Q3/footprints.pretty")(options "")(descr ""))
   (lib (name "BQ24780S")(type "KiCad")(uri "${KIPRJMOD}/libraries/bq24780s/KiCADv6/footprints.pretty")(options "")(descr ""))
+  (lib (name "equipo_medicion_ensayo_celdas_footprints")(type "KiCad")(uri "${KIPRJMOD}/equipo_medicion_ensayo_celdas_footprints.pretty")(options "")(descr ""))
 )
