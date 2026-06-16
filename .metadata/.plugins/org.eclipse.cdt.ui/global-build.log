@@ -275,3 +275,276 @@ Finished building: default.size.stdout
  
 Finished building: pruebas_eq_med_celdas.list
  
+20:32:50 **** Incremental Build of configuration Debug for project pruebas_eq_med_celdas ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:176:12: warning: unused variable 'dac_buffer' [-Wunused-variable]
+  176 |   uint16_t dac_buffer[139];
+      |            ^~~~~~~~~~
+arm-none-eabi-gcc -o "pruebas_eq_med_celdas.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\German\Documents\equipo_medicion_ensayo_celdas\pruebas_eq_med_celdas\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pruebas_eq_med_celdas.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: pruebas_eq_med_celdas.elf
+ 
+arm-none-eabi-size  pruebas_eq_med_celdas.elf 
+arm-none-eabi-objdump -h -S pruebas_eq_med_celdas.elf  > "pruebas_eq_med_celdas.list"
+   text	   data	    bss	    dec	    hex	filename
+  18256	     12	   1956	  20224	   4f00	pruebas_eq_med_celdas.elf
+Finished building: default.size.stdout
+ 
+Finished building: pruebas_eq_med_celdas.list
+ 
+20:38:50 **** Incremental Build of configuration Debug for project pruebas_eq_med_celdas ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:176:12: warning: unused variable 'dac_buffer' [-Wunused-variable]
+  176 |   uint16_t dac_buffer[139];
+      |            ^~~~~~~~~~
+arm-none-eabi-gcc -o "pruebas_eq_med_celdas.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\German\Documents\equipo_medicion_ensayo_celdas\pruebas_eq_med_celdas\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pruebas_eq_med_celdas.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: pruebas_eq_med_celdas.elf
+ 
+arm-none-eabi-size  pruebas_eq_med_celdas.elf 
+arm-none-eabi-objdump -h -S pruebas_eq_med_celdas.elf  > "pruebas_eq_med_celdas.list"
+   text	   data	    bss	    dec	    hex	filename
+  18256	     12	   1956	  20224	   4f00	pruebas_eq_med_celdas.elf
+Finished building: default.size.stdout
+ 
+Finished building: pruebas_eq_med_celdas.list
+ 
+20:39:21 **** Incremental Build of configuration Debug for project pruebas_eq_med_celdas ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:176:12: warning: unused variable 'dac_buffer' [-Wunused-variable]
+  176 |   uint16_t dac_buffer[139];
+      |            ^~~~~~~~~~
+arm-none-eabi-gcc -o "pruebas_eq_med_celdas.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\German\Documents\equipo_medicion_ensayo_celdas\pruebas_eq_med_celdas\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pruebas_eq_med_celdas.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: pruebas_eq_med_celdas.elf
+ 
+arm-none-eabi-size  pruebas_eq_med_celdas.elf 
+arm-none-eabi-objdump -h -S pruebas_eq_med_celdas.elf  > "pruebas_eq_med_celdas.list"
+   text	   data	    bss	    dec	    hex	filename
+  18256	     12	   1956	  20224	   4f00	pruebas_eq_med_celdas.elf
+Finished building: default.size.stdout
+ 
+Finished building: pruebas_eq_med_celdas.list
+ 
+20:40:09 **** Incremental Build of configuration Debug for project pruebas_eq_med_celdas ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "pruebas_eq_med_celdas.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\German\Documents\equipo_medicion_ensayo_celdas\pruebas_eq_med_celdas\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pruebas_eq_med_celdas.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: pruebas_eq_med_celdas.elf
+ 
+arm-none-eabi-size  pruebas_eq_med_celdas.elf 
+arm-none-eabi-objdump -h -S pruebas_eq_med_celdas.elf  > "pruebas_eq_med_celdas.list"
+   text	   data	    bss	    dec	    hex	filename
+  24152	     12	   1956	  26120	   6608	pruebas_eq_med_celdas.elf
+Finished building: default.size.stdout
+ 
+Finished building: pruebas_eq_med_celdas.list
+ 
+20:41:06 **** Incremental Build of configuration Debug for project pruebas_eq_med_celdas ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "pruebas_eq_med_celdas.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\German\Documents\equipo_medicion_ensayo_celdas\pruebas_eq_med_celdas\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pruebas_eq_med_celdas.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: pruebas_eq_med_celdas.elf
+ 
+arm-none-eabi-size  pruebas_eq_med_celdas.elf 
+arm-none-eabi-objdump -h -S pruebas_eq_med_celdas.elf  > "pruebas_eq_med_celdas.list"
+   text	   data	    bss	    dec	    hex	filename
+  24148	     12	   1956	  26116	   6604	pruebas_eq_med_celdas.elf
+Finished building: default.size.stdout
+ 
+Finished building: pruebas_eq_med_celdas.list
+ 
+21:03:37 **** Incremental Build of configuration Debug for project pruebas_eq_med_celdas ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "pruebas_eq_med_celdas.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\German\Documents\equipo_medicion_ensayo_celdas\pruebas_eq_med_celdas\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pruebas_eq_med_celdas.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: pruebas_eq_med_celdas.elf
+ 
+arm-none-eabi-size  pruebas_eq_med_celdas.elf 
+arm-none-eabi-objdump -h -S pruebas_eq_med_celdas.elf  > "pruebas_eq_med_celdas.list"
+   text	   data	    bss	    dec	    hex	filename
+  24152	     12	   1956	  26120	   6608	pruebas_eq_med_celdas.elf
+Finished building: default.size.stdout
+ 
+Finished building: pruebas_eq_med_celdas.list
+ 
+15:19:14 **** Incremental Build of configuration Debug for project pruebas_eq_med_celdas ****
+make -j12 all 
+arm-none-eabi-size  pruebas_eq_med_celdas.elf 
+   text	   data	    bss	    dec	    hex	filename
+  24152	     12	   1956	  26120	   6608	pruebas_eq_med_celdas.elf
+Finished building: default.size.stdout
+ 
+15:30:05 **** Incremental Build of configuration Debug for project pruebas_eq_med_celdas ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "pruebas_eq_med_celdas.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\German\Documents\equipo_medicion_ensayo_celdas\pruebas_eq_med_celdas\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pruebas_eq_med_celdas.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: pruebas_eq_med_celdas.elf
+ 
+arm-none-eabi-size  pruebas_eq_med_celdas.elf 
+arm-none-eabi-objdump -h -S pruebas_eq_med_celdas.elf  > "pruebas_eq_med_celdas.list"
+   text	   data	    bss	    dec	    hex	filename
+  24148	     12	   1956	  26116	   6604	pruebas_eq_med_celdas.elf
+Finished building: default.size.stdout
+ 
+Finished building: pruebas_eq_med_celdas.list
+ 
+15:36:12 **** Incremental Build of configuration Debug for project pruebas_eq_med_celdas ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "pruebas_eq_med_celdas.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\German\Documents\equipo_medicion_ensayo_celdas\pruebas_eq_med_celdas\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pruebas_eq_med_celdas.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: pruebas_eq_med_celdas.elf
+ 
+arm-none-eabi-size  pruebas_eq_med_celdas.elf 
+arm-none-eabi-objdump -h -S pruebas_eq_med_celdas.elf  > "pruebas_eq_med_celdas.list"
+   text	   data	    bss	    dec	    hex	filename
+  24148	     12	   1956	  26116	   6604	pruebas_eq_med_celdas.elf
+Finished building: default.size.stdout
+ 
+Finished building: pruebas_eq_med_celdas.list
+ 
+15:36:39 **** Incremental Build of configuration Debug for project pruebas_eq_med_celdas ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "pruebas_eq_med_celdas.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\German\Documents\equipo_medicion_ensayo_celdas\pruebas_eq_med_celdas\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pruebas_eq_med_celdas.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: pruebas_eq_med_celdas.elf
+ 
+arm-none-eabi-size  pruebas_eq_med_celdas.elf 
+arm-none-eabi-objdump -h -S pruebas_eq_med_celdas.elf  > "pruebas_eq_med_celdas.list"
+   text	   data	    bss	    dec	    hex	filename
+  24148	     12	   1956	  26116	   6604	pruebas_eq_med_celdas.elf
+Finished building: default.size.stdout
+ 
+Finished building: pruebas_eq_med_celdas.list
+ 
+15:37:05 **** Incremental Build of configuration Debug for project pruebas_eq_med_celdas ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "pruebas_eq_med_celdas.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\German\Documents\equipo_medicion_ensayo_celdas\pruebas_eq_med_celdas\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pruebas_eq_med_celdas.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: pruebas_eq_med_celdas.elf
+ 
+arm-none-eabi-size  pruebas_eq_med_celdas.elf 
+arm-none-eabi-objdump -h -S pruebas_eq_med_celdas.elf  > "pruebas_eq_med_celdas.list"
+   text	   data	    bss	    dec	    hex	filename
+  24148	     12	   1956	  26116	   6604	pruebas_eq_med_celdas.elf
+Finished building: default.size.stdout
+ 
+Finished building: pruebas_eq_med_celdas.list
+ 
+15:56:32 **** Incremental Build of configuration Debug for project pruebas_eq_med_celdas ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "pruebas_eq_med_celdas.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\German\Documents\equipo_medicion_ensayo_celdas\pruebas_eq_med_celdas\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pruebas_eq_med_celdas.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: pruebas_eq_med_celdas.elf
+ 
+arm-none-eabi-size  pruebas_eq_med_celdas.elf 
+arm-none-eabi-objdump -h -S pruebas_eq_med_celdas.elf  > "pruebas_eq_med_celdas.list"
+   text	   data	    bss	    dec	    hex	filename
+  24148	     12	   1956	  26116	   6604	pruebas_eq_med_celdas.elf
+Finished building: default.size.stdout
+ 
+Finished building: pruebas_eq_med_celdas.list
+ 
+15:57:12 **** Incremental Build of configuration Debug for project pruebas_eq_med_celdas ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "pruebas_eq_med_celdas.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\German\Documents\equipo_medicion_ensayo_celdas\pruebas_eq_med_celdas\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pruebas_eq_med_celdas.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: pruebas_eq_med_celdas.elf
+ 
+arm-none-eabi-size  pruebas_eq_med_celdas.elf 
+arm-none-eabi-objdump -h -S pruebas_eq_med_celdas.elf  > "pruebas_eq_med_celdas.list"
+   text	   data	    bss	    dec	    hex	filename
+  24148	     12	   1956	  26116	   6604	pruebas_eq_med_celdas.elf
+Finished building: default.size.stdout
+ 
+Finished building: pruebas_eq_med_celdas.list
+ 
+16:07:35 **** Incremental Build of configuration Debug for project pruebas_eq_med_celdas ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "pruebas_eq_med_celdas.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\German\Documents\equipo_medicion_ensayo_celdas\pruebas_eq_med_celdas\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pruebas_eq_med_celdas.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: pruebas_eq_med_celdas.elf
+ 
+arm-none-eabi-size  pruebas_eq_med_celdas.elf 
+arm-none-eabi-objdump -h -S pruebas_eq_med_celdas.elf  > "pruebas_eq_med_celdas.list"
+   text	   data	    bss	    dec	    hex	filename
+  24152	     12	   1956	  26120	   6608	pruebas_eq_med_celdas.elf
+Finished building: default.size.stdout
+ 
+Finished building: pruebas_eq_med_celdas.list
+ 
+16:09:06 **** Incremental Build of configuration Debug for project pruebas_eq_med_celdas ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:176:12: warning: unused variable 'dac_buffer' [-Wunused-variable]
+  176 |   uint16_t dac_buffer[139];
+      |            ^~~~~~~~~~
+arm-none-eabi-gcc -o "pruebas_eq_med_celdas.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\German\Documents\equipo_medicion_ensayo_celdas\pruebas_eq_med_celdas\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pruebas_eq_med_celdas.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: pruebas_eq_med_celdas.elf
+ 
+arm-none-eabi-size  pruebas_eq_med_celdas.elf 
+arm-none-eabi-objdump -h -S pruebas_eq_med_celdas.elf  > "pruebas_eq_med_celdas.list"
+   text	   data	    bss	    dec	    hex	filename
+  18252	     12	   1956	  20220	   4efc	pruebas_eq_med_celdas.elf
+Finished building: default.size.stdout
+ 
+Finished building: pruebas_eq_med_celdas.list
+ 
+16:10:15 **** Incremental Build of configuration Debug for project pruebas_eq_med_celdas ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:176:12: warning: unused variable 'dac_buffer' [-Wunused-variable]
+  176 |   uint16_t dac_buffer[139];
+      |            ^~~~~~~~~~
+arm-none-eabi-gcc -o "pruebas_eq_med_celdas.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\German\Documents\equipo_medicion_ensayo_celdas\pruebas_eq_med_celdas\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pruebas_eq_med_celdas.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: pruebas_eq_med_celdas.elf
+ 
+arm-none-eabi-size  pruebas_eq_med_celdas.elf 
+arm-none-eabi-objdump -h -S pruebas_eq_med_celdas.elf  > "pruebas_eq_med_celdas.list"
+   text	   data	    bss	    dec	    hex	filename
+  18256	     12	   1956	  20224	   4f00	pruebas_eq_med_celdas.elf
+Finished building: default.size.stdout
+ 
+Finished building: pruebas_eq_med_celdas.list
+ 
+16:10:58 **** Incremental Build of configuration Debug for project pruebas_eq_med_celdas ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:176:12: warning: unused variable 'dac_buffer' [-Wunused-variable]
+  176 |   uint16_t dac_buffer[139];
+      |            ^~~~~~~~~~
+arm-none-eabi-gcc -o "pruebas_eq_med_celdas.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\German\Documents\equipo_medicion_ensayo_celdas\pruebas_eq_med_celdas\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pruebas_eq_med_celdas.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: pruebas_eq_med_celdas.elf
+ 
+arm-none-eabi-size  pruebas_eq_med_celdas.elf 
+arm-none-eabi-objdump -h -S pruebas_eq_med_celdas.elf  > "pruebas_eq_med_celdas.list"
+   text	   data	    bss	    dec	    hex	filename
+  18256	     12	   1956	  20224	   4f00	pruebas_eq_med_celdas.elf
+Finished building: default.size.stdout
+ 
+Finished building: pruebas_eq_med_celdas.list
+ 
+16:12:09 **** Incremental Build of configuration Debug for project pruebas_eq_med_celdas ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:176:12: warning: unused variable 'dac_buffer' [-Wunused-variable]
+  176 |   uint16_t dac_buffer[139];
+      |            ^~~~~~~~~~
+arm-none-eabi-gcc -o "pruebas_eq_med_celdas.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\German\Documents\equipo_medicion_ensayo_celdas\pruebas_eq_med_celdas\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pruebas_eq_med_celdas.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: pruebas_eq_med_celdas.elf
+ 
+arm-none-eabi-size  pruebas_eq_med_celdas.elf 
+arm-none-eabi-objdump -h -S pruebas_eq_med_celdas.elf  > "pruebas_eq_med_celdas.list"
+   text	   data	    bss	    dec	    hex	filename
+  18256	     12	   1956	  20224	   4f00	pruebas_eq_med_celdas.elf
+Finished building: default.size.stdout
+ 
+Finished building: pruebas_eq_med_celdas.list
+ 

@@ -179,10 +179,10 @@ int main(void)
 //
 //  HAL_SPI_Transmit_DMA(&hspi1, (uint8_t *) dac_buffer, sizeof(dac_buffer)/sizeof(uint16_t));
 
-  //MCP4822_SetVoltage(MCP4822_CH_A ,1.24);
+  MCP4822_SetVoltage(MCP4822_CH_A ,0.1);
   MCP4822_SetVoltage(MCP4822_CH_B , 2);
   HAL_Delay(100);
-  MCP4822_FillSineDMA(dac_buffer, sizeof(dac_buffer)/sizeof(uint16_t), 0.08f, 1.1f, 1, MCP4822_CH_A);
+//  MCP4822_FillSineDMA(dac_buffer, sizeof(dac_buffer)/sizeof(uint16_t), 0.07f, 1.0f, 1, MCP4822_CH_A);
   HAL_Delay(5000);
   /* USER CODE END 2 */
 
