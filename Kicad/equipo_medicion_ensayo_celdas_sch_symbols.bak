@@ -169,7 +169,7 @@
 				)
 			)
 		)
-		(property "Footprint" "DDA8_3P1X2P4_TEX"
+		(property "Footprint" "Package_SO:Texas_R-PDSO-G8_EP2.95x4.9mm_Mask2.4x3.1mm"
 			(at 0 0 0)
 			(effects
 				(font
@@ -196,14 +196,6 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
-			)
-		)
-		(property "ki_locked" ""
-			(at 0 0 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
 			)
 		)
 		(property "ki_keywords" "TPS54560BQDDAQ1"
