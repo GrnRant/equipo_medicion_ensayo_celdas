@@ -693,7 +693,7 @@
         "uuid": "3a28fce2-eb35-4866-9328-426b80276fd9"
       }
     ],
-    "used_designators": "J1",
+    "used_designators": "R18-28,J1,J5-8,L4,D6-8,#PWR34-36,#PWR40-64,C34-35,C38-53,FLT2,SW3-4,U5,U7-8,X3-4",
     "variants": []
   },
   "sheets": [
@@ -704,6 +704,10 @@
     [
       "68afcb66-0dad-4d28-a608-8504ebab0613",
       "POWER_IN"
+    ],
+    [
+      "0cc074f7-5ff5-4767-bccc-91631bf18381",
+      "CONTROL_AND_PROCESSING"
     ]
   ],
   "text_variables": {},
