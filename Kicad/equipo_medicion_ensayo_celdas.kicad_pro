@@ -693,7 +693,7 @@
         "uuid": "3a28fce2-eb35-4866-9328-426b80276fd9"
       }
     ],
-    "used_designators": "R18-28,J1,J5-8,L4,D6-8,#PWR34-36,#PWR40-64,C34-35,C38-53,FLT2,SW3-4,U5,U7-8,X3-4",
+    "used_designators": "Q1-10,R1-4,R6,R18-20,R29-30,RV1-2,U1-2,D1,D4,#PWR1-10",
     "variants": []
   },
   "sheets": [
@@ -708,6 +708,14 @@
     [
       "0cc074f7-5ff5-4767-bccc-91631bf18381",
       "CONTROL_AND_PROCESSING"
+    ],
+    [
+      "4a6e8496-6b14-4af6-9af8-1e2b5d887967",
+      "SPLIT_POWER_SUPPLY"
+    ],
+    [
+      "92e5bf48-053a-4a82-9fd2-feda02bfc238",
+      "CELL_TESTER_MODULE"
     ]
   ],
   "text_variables": {},
