@@ -2559,7 +2559,7 @@
 		(dnp no)
 		(uuid "4d2f3ae8-c058-42b1-ba16-f32dd33c6509")
 		(property "Reference" "Q2"
-			(at 210.82 72.3901 0)
+			(at 210.312 67.0559 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2569,8 +2569,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "PNP"
-			(at 210.82 69.8501 0)
+		(property "Value" "TIP36C"
+			(at 210.058 69.342 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2851,7 +2851,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "NPN"
+		(property "Value" "2N2222"
 			(at 199.39 80.0099 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2969,7 +2969,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "NPN"
+		(property "Value" "2N2222"
 			(at 190.5 101.5999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3607,19 +3607,19 @@
 			(uuid "79f24439-ad64-407a-936f-69270c02ce5b")
 		)
 		(pin "6"
-			(uuid "6ee08d30-d1a7-46ce-a687-63e2f10c297f")
+			(uuid "6ee08d30-d1a7-46ce-a687-63e2f10c2980")
 		)
 		(pin "5"
-			(uuid "eaf3f3f7-d97f-483a-b26e-1b438a934fe6")
+			(uuid "eaf3f3f7-d97f-483a-b26e-1b438a934fe7")
 		)
 		(pin "8"
-			(uuid "d451484d-132b-4eb0-b4fd-7ded0a94e9e6")
+			(uuid "d451484d-132b-4eb0-b4fd-7ded0a94e9e7")
 		)
 		(pin "7"
-			(uuid "4b76fdc8-38d5-471b-8f53-8bce6585752f")
+			(uuid "4b76fdc8-38d5-471b-8f53-8bce65857530")
 		)
 		(pin "4"
-			(uuid "fefa05de-03c8-46b4-b651-38dd53949ab3")
+			(uuid "fefa05de-03c8-46b4-b651-38dd53949ab4")
 		)
 		(pin "1"
 			(uuid "dbce8f2f-be5c-4316-aa74-74e86160eccd")
@@ -3659,7 +3659,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "NPN"
+		(property "Value" "TIP35C"
 			(at 210.82 130.8099 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3849,7 +3849,7 @@
 		(dnp no)
 		(uuid "ef83b521-160a-4d64-a213-1bd477e0ee9d")
 		(property "Reference" "Q4"
-			(at 199.39 121.9201 0)
+			(at 199.39 117.094 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3859,7 +3859,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "PNP"
+		(property "Value" "2N2907"
 			(at 199.39 119.3801 0)
 			(show_name no)
 			(do_not_autoplace no)
