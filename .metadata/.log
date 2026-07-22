@@ -662,3 +662,215 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-06-13 15:19:12.345
 !MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2026-07-11 14:47:19.814 -----------------------------------------------
+eclipse.buildId=Version 1.18.1
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_AR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2026-07-11 14:47:28.064
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-07-11 14:47:28.064
+!MESSAGE Log4j2 initialized with config file C:\Users\German\Documents\equipo_medicion_ensayo_celdas\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-07-11 14:47:32.121
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2026-07-18 19:22:27.032 -----------------------------------------------
+eclipse.buildId=Version 1.18.1
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_AR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2026-07-18 19:22:37.583
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-07-18 19:22:37.585
+!MESSAGE Log4j2 initialized with config file C:\Users\German\Documents\equipo_medicion_ensayo_celdas\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-07-18 19:22:41.586
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2026-07-19 14:49:18.973 -----------------------------------------------
+eclipse.buildId=Version 1.18.1
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_AR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2026-07-19 14:49:24.551
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-07-19 14:49:24.552
+!MESSAGE Log4j2 initialized with config file C:\Users\German\Documents\equipo_medicion_ensayo_celdas\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-07-19 14:49:29.890
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.core.jobs 4 2 2026-07-19 19:31:35.576
+!MESSAGE An internal error occurred during: "Execute Debug Command".
+!STACK 0
+org.eclipse.core.runtime.AssertionFailedException: assertion failed: The application has not been initialized.
+	at org.eclipse.core.runtime.Assert.isTrue(Assert.java:119)
+	at org.eclipse.core.internal.runtime.InternalPlatform.assertInitialized(InternalPlatform.java:185)
+	at org.eclipse.core.internal.runtime.InternalPlatform.getAdapterManager(InternalPlatform.java:206)
+	at org.eclipse.core.runtime.Platform.getAdapterManager(Platform.java:661)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunch.getAdapter(GdbLaunch.java:454)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunch.disconnect(GdbLaunch.java:338)
+	at org.eclipse.debug.internal.core.commands.DisconnectCommand.execute(DisconnectCommand.java:35)
+	at org.eclipse.debug.internal.core.commands.ForEachCommand.doExecute(ForEachCommand.java:36)
+	at org.eclipse.debug.core.commands.AbstractDebugCommand$1.run(AbstractDebugCommand.java:215)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 2 2 2026-07-19 19:31:35.885
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$InputReadJob RUNNING
+	 at java.base/java.lang.Object.wait0(Native Method)
+	 at java.base/java.lang.Object.wait(Object.java:366)
+	 at java.base/java.lang.Object.wait(Object.java:339)
+	 at org.eclipse.ui.console.IOConsoleInputStream.waitForData(IOConsoleInputStream.java:140)
+	 at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:91)
+	 at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:113)
+	 at org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$InputReadJob.run(GdbBasicCliConsole.java:248)
+	 at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SESSION 2026-07-19 19:34:32.397 -----------------------------------------------
+eclipse.buildId=Version 1.18.1
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_AR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2026-07-19 19:34:37.753
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-07-19 19:34:37.753
+!MESSAGE Log4j2 initialized with config file C:\Users\German\Documents\equipo_medicion_ensayo_celdas\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-07-19 19:34:42.507
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2026-07-19 22:20:42.486 -----------------------------------------------
+eclipse.buildId=Version 1.18.1
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_AR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2026-07-19 22:20:47.973
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-07-19 22:20:47.973
+!MESSAGE Log4j2 initialized with config file C:\Users\German\Documents\equipo_medicion_ensayo_celdas\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-07-19 22:20:53.372
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2026-07-20 12:53:15.951 -----------------------------------------------
+eclipse.buildId=Version 1.18.1
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_AR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2026-07-20 12:53:21.274
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-07-20 12:53:21.276
+!MESSAGE Log4j2 initialized with config file C:\Users\German\Documents\equipo_medicion_ensayo_celdas\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-07-20 12:53:25.249
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2026-07-20 20:37:21.985 -----------------------------------------------
+eclipse.buildId=Version 1.18.1
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_AR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2026-07-20 20:37:27.428
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-07-20 20:37:27.429
+!MESSAGE Log4j2 initialized with config file C:\Users\German\Documents\equipo_medicion_ensayo_celdas\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-07-20 20:37:33.165
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2026-07-20 20:39:07.942
+!MESSAGE ST-LINK GDB server failed to start (exit code = 0)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2026-07-20 20:39:07.969
+!MESSAGE Error in final launch sequence:
+
+Failed to start GDB server
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to start GDB server
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:252)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.launch(DSFDelegate.java:334)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:805)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1054)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1257)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.core.runtime.CoreException: Error in initializing ST-LINK device.
+Reason: (0) Unknown. Please check power and cabling to target.
+	at com.st.stm32cube.ide.mcu.debug.stlink.StLinkDebugHardware.verifyServer(StLinkDebugHardware.java:1911)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:199)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:93)
+	at com.st.stm32cube.ide.mcu.debug.launch.LaunchSequenceUtil.stepStartGDBServer(LaunchSequenceUtil.java:206)
+	at com.st.stm32cube.ide.mcu.debug.launch.GDBExtendedJtagDSFFinalLaunchSequence_7_12.stepStartGDBServer(GDBExtendedJtagDSFFinalLaunchSequence_7_12.java:104)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:160)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:475)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:437)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:391)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+!SUBENTRY 1 com.st.stm32cube.ide.mcu.debug.launch 4 0 2026-07-20 20:39:07.970
+!MESSAGE Failed to start GDB server
+!STACK 1
+org.eclipse.core.runtime.CoreException: Error in initializing ST-LINK device.
+Reason: (0) Unknown. Please check power and cabling to target.
+	at com.st.stm32cube.ide.mcu.debug.stlink.StLinkDebugHardware.verifyServer(StLinkDebugHardware.java:1911)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:199)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:93)
+	at com.st.stm32cube.ide.mcu.debug.launch.LaunchSequenceUtil.stepStartGDBServer(LaunchSequenceUtil.java:206)
+	at com.st.stm32cube.ide.mcu.debug.launch.GDBExtendedJtagDSFFinalLaunchSequence_7_12.stepStartGDBServer(GDBExtendedJtagDSFFinalLaunchSequence_7_12.java:104)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:160)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:475)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:437)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:391)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+!SUBENTRY 2 com.st.stm32cube.ide.mcu.toolchain 4 0 2026-07-20 20:39:07.970
+!MESSAGE Error in initializing ST-LINK device.
+Reason: (0) Unknown. Please check power and cabling to target.
+!SESSION 2026-07-20 20:40:41.753 -----------------------------------------------
+eclipse.buildId=Version 1.18.1
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_AR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2026-07-20 20:40:47.930
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-07-20 20:40:47.931
+!MESSAGE Log4j2 initialized with config file C:\Users\German\Documents\equipo_medicion_ensayo_celdas\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-07-20 20:40:53.366
+!MESSAGE Started RMI Server, listening on port 41337

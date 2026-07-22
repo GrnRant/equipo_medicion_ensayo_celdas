@@ -1,4 +1,4 @@
-16:12:09 **** Incremental Build of configuration Debug for project pruebas_eq_med_celdas ****
+21:37:14 **** Incremental Build of configuration Debug for project pruebas_eq_med_celdas ****
 make -j12 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'main':
@@ -11,11 +11,11 @@ Finished building target: pruebas_eq_med_celdas.elf
 arm-none-eabi-size  pruebas_eq_med_celdas.elf 
 arm-none-eabi-objdump -h -S pruebas_eq_med_celdas.elf  > "pruebas_eq_med_celdas.list"
    text	   data	    bss	    dec	    hex	filename
-  18256	     12	   1956	  20224	   4f00	pruebas_eq_med_celdas.elf
+  18428	     12	   1956	  20396	   4fac	pruebas_eq_med_celdas.elf
 Finished building: default.size.stdout
  
 Finished building: pruebas_eq_med_celdas.list
  
 
-16:12:09 Build Finished. 0 errors, 1 warnings. (took 604ms)
+21:37:15 Build Finished. 0 errors, 1 warnings. (took 612ms)
 
