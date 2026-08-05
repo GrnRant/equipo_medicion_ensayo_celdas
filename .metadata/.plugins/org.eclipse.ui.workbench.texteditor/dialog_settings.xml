@@ -12,4 +12,10 @@
 		<item value="mcp4821_sine"/>
 		<item value="mcp4822_sine"/>
 	</list>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="  //MCP4822_FillSineDMA(dac_buffer, sizeof(dac_buffer)/sizeof(uint16_t), 0.1f, 1.0f, 1, MCP4822_CH_A);"/>
+		<list key="findhistory">
+			<item value="  //MCP4822_FillSineDMA(dac_buffer, sizeof(dac_buffer)/sizeof(uint16_t), 0.1f, 1.0f, 1, MCP4822_CH_A);"/>
+		</list>
+	</section>
 </section>

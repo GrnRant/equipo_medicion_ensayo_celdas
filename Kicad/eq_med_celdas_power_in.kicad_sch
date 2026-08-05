@@ -3100,7 +3100,7 @@
 		)
 		(uuid "262d1978-c3db-4f47-915e-cdd9f56f9b5d")
 	)
-	(hierarchical_label "VOUT_9V"
+	(hierarchical_label "VOUT_8V"
 		(shape input)
 		(at 251.46 36.83 0)
 		(effects
@@ -4945,7 +4945,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "105k"
+		(property "Value" "90.9k"
 			(at 236.22 55.8799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6691,7 +6691,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "16.9k"
+		(property "Value" "16.2k"
 			(at 150.114 73.914 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6852,7 +6852,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "36.5k"
+		(property "Value" "40.2k"
 			(at 88.9 76.1999 0)
 			(show_name no)
 			(do_not_autoplace no)

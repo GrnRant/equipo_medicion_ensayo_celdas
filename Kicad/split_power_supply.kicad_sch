@@ -2350,18 +2350,22 @@
 			)
 		)
 		(pin "3"
-			(uuid "806f05e8-d426-4ced-a3f8-a3d4331d162b")
+			(uuid "24149da0-fde0-4a43-a18a-8b1114145a1d")
 		)
 		(pin "1"
-			(uuid "0313fc3c-221f-4490-b01b-8b004459d568")
+			(uuid "ec37f923-a61d-47db-84f8-8d97540ff8c5")
 		)
 		(pin "2"
-			(uuid "3c44f9e0-b52f-45d1-bca3-cb74752f71a8")
+			(uuid "833a18b1-75b1-46ec-b051-045865e49723")
 		)
 		(instances
 			(project "equipo_medicion_ensayo_celdas"
 				(path "/3a28fce2-eb35-4866-9328-426b80276fd9/4a6e8496-6b14-4af6-9af8-1e2b5d887967"
 					(reference "RV1")
+					(unit 1)
+				)
+				(path "/3a28fce2-eb35-4866-9328-426b80276fd9/4ab52f82-3340-4681-9016-0e0ffe451c1a"
+					(reference "RV14")
 					(unit 1)
 				)
 			)
@@ -2435,15 +2439,19 @@
 			)
 		)
 		(pin "2"
-			(uuid "9f54664e-526b-415e-9f4a-a84cefd0550e")
+			(uuid "8d2b5844-9f4b-4dab-a871-fcd0027307ab")
 		)
 		(pin "1"
-			(uuid "6aa2e399-61ca-491e-b674-a7e9ae26a87f")
+			(uuid "f743a0da-2908-4b7d-abc1-d0d256e3a08f")
 		)
 		(instances
 			(project "equipo_medicion_ensayo_celdas"
 				(path "/3a28fce2-eb35-4866-9328-426b80276fd9/4a6e8496-6b14-4af6-9af8-1e2b5d887967"
 					(reference "R3")
+					(unit 1)
+				)
+				(path "/3a28fce2-eb35-4866-9328-426b80276fd9/4ab52f82-3340-4681-9016-0e0ffe451c1a"
+					(reference "R137")
 					(unit 1)
 				)
 			)
@@ -2523,13 +2531,13 @@
 			(uuid "eaf3f3f7-d97f-483a-b26e-1b438a934fe6")
 		)
 		(pin "8"
-			(uuid "d451484d-132b-4eb0-b4fd-7ded0a94e9e6")
+			(uuid "a910281a-0fb4-476f-9200-dd4e56a9fa3d")
 		)
 		(pin "7"
 			(uuid "4b76fdc8-38d5-471b-8f53-8bce6585752f")
 		)
 		(pin "4"
-			(uuid "fefa05de-03c8-46b4-b651-38dd53949ab3")
+			(uuid "a2f8ebb5-f11a-4e77-86cc-3a6ff37e4f56")
 		)
 		(pin "1"
 			(uuid "256d663d-ce96-415b-81fa-3413e137c815")
@@ -2541,6 +2549,10 @@
 			(project "equipo_medicion_ensayo_celdas"
 				(path "/3a28fce2-eb35-4866-9328-426b80276fd9/4a6e8496-6b14-4af6-9af8-1e2b5d887967"
 					(reference "U1")
+					(unit 3)
+				)
+				(path "/3a28fce2-eb35-4866-9328-426b80276fd9/4ab52f82-3340-4681-9016-0e0ffe451c1a"
+					(reference "U31")
 					(unit 3)
 				)
 			)
@@ -2647,18 +2659,22 @@
 			)
 		)
 		(pin "2"
-			(uuid "e0ec0b1d-6a6c-4a8b-aea4-cead0dc0add3")
+			(uuid "0980b7ad-25ad-40b7-80a7-2f9d4b28d42e")
 		)
 		(pin "1"
-			(uuid "2f8ee430-2364-4feb-8f0c-318b4eae7b07")
+			(uuid "ecc0e255-d4a7-4731-a657-fdc9eaa1300e")
 		)
 		(pin "3"
-			(uuid "5dff6f8e-1f59-4ff6-945d-0fe4e584f22a")
+			(uuid "a4be3a1f-6a89-45ba-98d0-dd0913577ad9")
 		)
 		(instances
 			(project "equipo_medicion_ensayo_celdas"
 				(path "/3a28fce2-eb35-4866-9328-426b80276fd9/4a6e8496-6b14-4af6-9af8-1e2b5d887967"
 					(reference "Q2")
+					(unit 1)
+				)
+				(path "/3a28fce2-eb35-4866-9328-426b80276fd9/4ab52f82-3340-4681-9016-0e0ffe451c1a"
+					(reference "Q33")
 					(unit 1)
 				)
 			)
@@ -2732,15 +2748,19 @@
 			)
 		)
 		(pin "2"
-			(uuid "435c170a-a919-4516-8e9b-5a8f615b0fc3")
+			(uuid "ba444415-ad99-494f-a3d6-f3e2ae829b24")
 		)
 		(pin "1"
-			(uuid "8a0d135f-f262-4fa0-ba82-0d60b1994495")
+			(uuid "5a90c2fd-e7b2-4f50-89f0-60e68f0d3ad5")
 		)
 		(instances
 			(project "equipo_medicion_ensayo_celdas"
 				(path "/3a28fce2-eb35-4866-9328-426b80276fd9/4a6e8496-6b14-4af6-9af8-1e2b5d887967"
 					(reference "R4")
+					(unit 1)
+				)
+				(path "/3a28fce2-eb35-4866-9328-426b80276fd9/4ab52f82-3340-4681-9016-0e0ffe451c1a"
+					(reference "R141")
 					(unit 1)
 				)
 			)
@@ -2814,15 +2834,19 @@
 			)
 		)
 		(pin "2"
-			(uuid "7f6a3cee-a3f4-405a-bb98-25bbc0aa6bcc")
+			(uuid "c8590a44-d77d-40d6-a8f3-0a77ede32d0d")
 		)
 		(pin "1"
-			(uuid "160eb427-f808-4da7-99ac-d2623e5e977e")
+			(uuid "35ba5f3d-2140-4c32-b797-d9a67dbae79e")
 		)
 		(instances
 			(project "equipo_medicion_ensayo_celdas"
 				(path "/3a28fce2-eb35-4866-9328-426b80276fd9/4a6e8496-6b14-4af6-9af8-1e2b5d887967"
 					(reference "R2")
+					(unit 1)
+				)
+				(path "/3a28fce2-eb35-4866-9328-426b80276fd9/4ab52f82-3340-4681-9016-0e0ffe451c1a"
+					(reference "R144")
 					(unit 1)
 				)
 			)
@@ -2929,18 +2953,22 @@
 			)
 		)
 		(pin "1"
-			(uuid "d77ae8bb-c899-48dc-a795-8bf0ed8cb4c5")
+			(uuid "2e1a3969-6b44-4437-bfdd-d96d55d27a9e")
 		)
 		(pin "2"
-			(uuid "ff9b93cd-47f2-4936-b64c-d282ca8ff7fa")
+			(uuid "4dd31be6-fa16-48d1-8140-b3075c4c1dac")
 		)
 		(pin "3"
-			(uuid "9ba79664-7c7a-44eb-baaf-15167242e47a")
+			(uuid "032d5f43-723b-4357-b85b-890823945b2d")
 		)
 		(instances
 			(project "equipo_medicion_ensayo_celdas"
 				(path "/3a28fce2-eb35-4866-9328-426b80276fd9/4a6e8496-6b14-4af6-9af8-1e2b5d887967"
 					(reference "Q1")
+					(unit 1)
+				)
+				(path "/3a28fce2-eb35-4866-9328-426b80276fd9/4ab52f82-3340-4681-9016-0e0ffe451c1a"
+					(reference "Q31")
 					(unit 1)
 				)
 			)
@@ -3047,18 +3075,22 @@
 			)
 		)
 		(pin "1"
-			(uuid "c6306c67-1393-4825-85b1-8f22e47aec6a")
+			(uuid "87334198-ed2f-4b1e-95d6-8ccb240eddcd")
 		)
 		(pin "2"
-			(uuid "f37b74fc-d2fb-42ee-825a-2af635a87f95")
+			(uuid "82d16b02-f73d-4f91-bf38-c5ae843bf860")
 		)
 		(pin "3"
-			(uuid "62b020c4-38fe-45fd-9102-15100fdf17f0")
+			(uuid "ecff9ba3-79d0-4a2e-8653-daaf8ba104eb")
 		)
 		(instances
 			(project "equipo_medicion_ensayo_celdas"
 				(path "/3a28fce2-eb35-4866-9328-426b80276fd9/4a6e8496-6b14-4af6-9af8-1e2b5d887967"
 					(reference "Q5")
+					(unit 1)
+				)
+				(path "/3a28fce2-eb35-4866-9328-426b80276fd9/4ab52f82-3340-4681-9016-0e0ffe451c1a"
+					(reference "Q30")
 					(unit 1)
 				)
 			)
@@ -3131,12 +3163,16 @@
 			)
 		)
 		(pin "1"
-			(uuid "332d0d4a-9884-48c7-b687-baeb27bcca14")
+			(uuid "768aa0ef-1e82-4560-9715-273951ca7d4f")
 		)
 		(instances
 			(project "equipo_medicion_ensayo_celdas"
 				(path "/3a28fce2-eb35-4866-9328-426b80276fd9/4a6e8496-6b14-4af6-9af8-1e2b5d887967"
 					(reference "#PWR01")
+					(unit 1)
+				)
+				(path "/3a28fce2-eb35-4866-9328-426b80276fd9/4ab52f82-3340-4681-9016-0e0ffe451c1a"
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)
@@ -3209,12 +3245,16 @@
 			)
 		)
 		(pin "1"
-			(uuid "15cf621d-dee5-493a-b050-33d748caf270")
+			(uuid "cf562a35-2c17-44a1-990f-8a08b6937d5e")
 		)
 		(instances
 			(project "equipo_medicion_ensayo_celdas"
 				(path "/3a28fce2-eb35-4866-9328-426b80276fd9/4a6e8496-6b14-4af6-9af8-1e2b5d887967"
 					(reference "#PWR03")
+					(unit 1)
+				)
+				(path "/3a28fce2-eb35-4866-9328-426b80276fd9/4ab52f82-3340-4681-9016-0e0ffe451c1a"
+					(reference "#PWR021")
 					(unit 1)
 				)
 			)
@@ -3288,12 +3328,16 @@
 			)
 		)
 		(pin "1"
-			(uuid "5f13de85-3993-4bee-a1a7-c184f2d50930")
+			(uuid "7bfc1149-4c47-4428-88c8-e2cd8565d974")
 		)
 		(instances
 			(project "equipo_medicion_ensayo_celdas"
 				(path "/3a28fce2-eb35-4866-9328-426b80276fd9/4a6e8496-6b14-4af6-9af8-1e2b5d887967"
 					(reference "#PWR05")
+					(unit 1)
+				)
+				(path "/3a28fce2-eb35-4866-9328-426b80276fd9/4ab52f82-3340-4681-9016-0e0ffe451c1a"
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -3367,15 +3411,19 @@
 			)
 		)
 		(pin "2"
-			(uuid "4747094a-7496-40d6-9173-a9af1894c7e1")
+			(uuid "740cd106-ec05-4e57-8e85-a75213afe807")
 		)
 		(pin "1"
-			(uuid "e5681f66-ffbb-4e0f-b54d-63259c0a1f82")
+			(uuid "c264d9e8-58d0-4ec2-8d1d-d3def80ed36f")
 		)
 		(instances
 			(project "equipo_medicion_ensayo_celdas"
 				(path "/3a28fce2-eb35-4866-9328-426b80276fd9/4a6e8496-6b14-4af6-9af8-1e2b5d887967"
 					(reference "R1")
+					(unit 1)
+				)
+				(path "/3a28fce2-eb35-4866-9328-426b80276fd9/4ab52f82-3340-4681-9016-0e0ffe451c1a"
+					(reference "R143")
 					(unit 1)
 				)
 			)
@@ -3449,12 +3497,16 @@
 			)
 		)
 		(pin "1"
-			(uuid "eb352b89-e559-488d-93e5-848c52153b18")
+			(uuid "92dd720a-df40-4271-a6f5-b509f56e7957")
 		)
 		(instances
 			(project "equipo_medicion_ensayo_celdas"
 				(path "/3a28fce2-eb35-4866-9328-426b80276fd9/4a6e8496-6b14-4af6-9af8-1e2b5d887967"
 					(reference "#PWR02")
+					(unit 1)
+				)
+				(path "/3a28fce2-eb35-4866-9328-426b80276fd9/4ab52f82-3340-4681-9016-0e0ffe451c1a"
+					(reference "#PWR020")
 					(unit 1)
 				)
 			)
@@ -3528,12 +3580,16 @@
 			)
 		)
 		(pin "1"
-			(uuid "9c29e24f-6540-4025-a51f-99a875da3bfe")
+			(uuid "64381bad-e5da-401f-a30d-2556b2866e22")
 		)
 		(instances
 			(project "equipo_medicion_ensayo_celdas"
 				(path "/3a28fce2-eb35-4866-9328-426b80276fd9/4a6e8496-6b14-4af6-9af8-1e2b5d887967"
 					(reference "#PWR04")
+					(unit 1)
+				)
+				(path "/3a28fce2-eb35-4866-9328-426b80276fd9/4ab52f82-3340-4681-9016-0e0ffe451c1a"
+					(reference "#PWR022")
 					(unit 1)
 				)
 			)
@@ -3604,7 +3660,7 @@
 			)
 		)
 		(pin "3"
-			(uuid "79f24439-ad64-407a-936f-69270c02ce5b")
+			(uuid "0b670fd3-2a0c-4d49-89e0-1a1a249f45d5")
 		)
 		(pin "6"
 			(uuid "6ee08d30-d1a7-46ce-a687-63e2f10c2980")
@@ -3622,15 +3678,19 @@
 			(uuid "fefa05de-03c8-46b4-b651-38dd53949ab4")
 		)
 		(pin "1"
-			(uuid "dbce8f2f-be5c-4316-aa74-74e86160eccd")
+			(uuid "265c3209-bc12-4f21-951d-a6a16e103761")
 		)
 		(pin "2"
-			(uuid "0c2d717d-9a21-4909-91e4-2950f006fdb9")
+			(uuid "dc4717a7-73a5-4e62-ac84-9f6cbe407af5")
 		)
 		(instances
 			(project "equipo_medicion_ensayo_celdas"
 				(path "/3a28fce2-eb35-4866-9328-426b80276fd9/4a6e8496-6b14-4af6-9af8-1e2b5d887967"
 					(reference "U1")
+					(unit 1)
+				)
+				(path "/3a28fce2-eb35-4866-9328-426b80276fd9/4ab52f82-3340-4681-9016-0e0ffe451c1a"
+					(reference "U31")
 					(unit 1)
 				)
 			)
@@ -3737,18 +3797,22 @@
 			)
 		)
 		(pin "1"
-			(uuid "8674ee9a-3ecf-402b-a325-3cb61ef6bed1")
+			(uuid "9b40a6bc-55a1-4e5d-8713-b2d5253c4f67")
 		)
 		(pin "2"
-			(uuid "72a11232-57b9-4ca1-811c-b2e0e57b0075")
+			(uuid "3480cf4b-b23e-4a06-aa05-b2fbf23b9aa2")
 		)
 		(pin "3"
-			(uuid "c19a0136-3e1f-4fa7-a1bd-353e94208fd8")
+			(uuid "a3682dab-845b-42e6-b4e4-78c7b713802e")
 		)
 		(instances
 			(project "equipo_medicion_ensayo_celdas"
 				(path "/3a28fce2-eb35-4866-9328-426b80276fd9/4a6e8496-6b14-4af6-9af8-1e2b5d887967"
 					(reference "Q3")
+					(unit 1)
+				)
+				(path "/3a28fce2-eb35-4866-9328-426b80276fd9/4ab52f82-3340-4681-9016-0e0ffe451c1a"
+					(reference "Q34")
 					(unit 1)
 				)
 			)
@@ -3822,15 +3886,19 @@
 			)
 		)
 		(pin "1"
-			(uuid "ceb81856-549b-48d0-85b7-ad5f9a3566a2")
+			(uuid "1e9f9b9c-87b6-4487-8e4b-fecc825ac7de")
 		)
 		(pin "2"
-			(uuid "4cd23dc8-3311-42e9-908b-17ce63525e7e")
+			(uuid "172293c8-4aea-4c5e-8559-e4ac9d58c415")
 		)
 		(instances
 			(project "equipo_medicion_ensayo_celdas"
 				(path "/3a28fce2-eb35-4866-9328-426b80276fd9/4a6e8496-6b14-4af6-9af8-1e2b5d887967"
 					(reference "D1")
+					(unit 1)
+				)
+				(path "/3a28fce2-eb35-4866-9328-426b80276fd9/4ab52f82-3340-4681-9016-0e0ffe451c1a"
+					(reference "D4")
 					(unit 1)
 				)
 			)
@@ -3937,18 +4005,22 @@
 			)
 		)
 		(pin "2"
-			(uuid "0c96cce6-5d90-40f5-bcad-6843adb21dfa")
+			(uuid "173596ca-125f-4187-9250-6da3f0106517")
 		)
 		(pin "1"
-			(uuid "4015018f-c8f4-4ef4-a3dc-072a0b595a91")
+			(uuid "a1848758-6dcd-4bab-8bda-a78c2f272699")
 		)
 		(pin "3"
-			(uuid "d602f726-8140-40be-963b-91e68a2af8b5")
+			(uuid "89cfe5d2-21fc-471a-b950-58742d77a77c")
 		)
 		(instances
 			(project "equipo_medicion_ensayo_celdas"
 				(path "/3a28fce2-eb35-4866-9328-426b80276fd9/4a6e8496-6b14-4af6-9af8-1e2b5d887967"
 					(reference "Q4")
+					(unit 1)
+				)
+				(path "/3a28fce2-eb35-4866-9328-426b80276fd9/4ab52f82-3340-4681-9016-0e0ffe451c1a"
+					(reference "Q32")
 					(unit 1)
 				)
 			)
@@ -4022,15 +4094,19 @@
 			)
 		)
 		(pin "2"
-			(uuid "bfc050c2-9109-429c-bcfa-ec8e63ca02c4")
+			(uuid "1cbe6a1e-04d8-471b-b4ba-ae305b4b33ef")
 		)
 		(pin "1"
-			(uuid "ea41ea29-edab-4fc6-93dc-7d8e882ca0b6")
+			(uuid "a5bdb045-63ef-4ead-8777-811f3c8c498e")
 		)
 		(instances
 			(project "equipo_medicion_ensayo_celdas"
 				(path "/3a28fce2-eb35-4866-9328-426b80276fd9/4a6e8496-6b14-4af6-9af8-1e2b5d887967"
 					(reference "R6")
+					(unit 1)
+				)
+				(path "/3a28fce2-eb35-4866-9328-426b80276fd9/4ab52f82-3340-4681-9016-0e0ffe451c1a"
+					(reference "R142")
 					(unit 1)
 				)
 			)
