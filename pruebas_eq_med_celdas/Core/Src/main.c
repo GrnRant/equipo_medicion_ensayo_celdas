@@ -22,6 +22,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "math.h"
+#include <string.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -34,7 +35,19 @@ typedef enum {
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+#define SAMPLE_RATE     100000
+#define CHANNELS        3
+#define RECORD_TIME_MS  100
 
+#define ADC_SAMPLES     ((SAMPLE_RATE * RECORD_TIME_MS / 1000) * CHANNELS)
+
+uint16_t adcBuffer[ADC_SAMPLES];
+
+volatile uint8_t adcFinished = 0;
+
+uint8_t rx;
+char command[16];
+uint8_t commandIndex = 0;
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -44,6 +57,7 @@ typedef enum {
 
 /* Private variables ---------------------------------------------------------*/
 ADC_HandleTypeDef hadc1;
+DMA_HandleTypeDef hdma_adc1;
 
 SPI_HandleTypeDef hspi1;
 DMA_HandleTypeDef hdma_spi1_tx;
@@ -111,19 +125,26 @@ void MCP4822_FillSineDMA(uint16_t *buffer,
 // --- Set voltage function ---
 void MCP4822_SetVoltage(MCP4822_Channel ch, float voltage)
 {
-    if (voltage < 0.0f) voltage = 0.0f;
-    if (voltage > 2.048f) voltage = 2.048f;
+    if (voltage < 0.0f)
+        voltage = 0.0f;
 
-    uint16_t code = (uint16_t)((voltage / 2.048f) * 4095.0f);
+    if (voltage > 4.096f)
+        voltage = 4.096f;
+
+    uint16_t code = (uint16_t)((voltage / 4.096f) * 4095.0f);
 
     uint16_t command = 0;
-    command |= (ch << 15);         // <-- Channel select
-    command |= (0 << 14);          // Unbuffered
-    command |= (1 << 13);          // Gain = 1x
-    command |= (1 << 12);          // Active
-    command |= (code & 0x0FFF);
 
-    HAL_SPI_Transmit(&hspi1, (uint8_t *)&command, 1, HAL_MAX_DELAY);
+    command |= ((uint16_t)ch << 15);  // Channel select
+    command |= (0U << 14);            // Unbuffered
+    command |= (0U << 13);            // Gain = 2x
+    command |= (1U << 12);            // Active
+    command |= (code & 0x0FFF);       // 12-bit DAC code
+
+    HAL_SPI_Transmit(&hspi1,
+                     (uint8_t *)&command,
+                     1,
+                     HAL_MAX_DELAY);
 }
 /* USER CODE END PFP */
 
@@ -187,7 +208,7 @@ int main(void)
 //  HAL_SPI_Transmit_DMA(&hspi1, (uint8_t *) dac_buffer, sizeof(dac_buffer)/sizeof(uint16_t));
 
 //  MCP4822_SetVoltage(MCP4822_CH_A , 2.0);
-  MCP4822_SetVoltage(MCP4822_CH_B , 2.0);
+  MCP4822_SetVoltage(MCP4822_CH_B , 2.5);
   HAL_Delay(100);
   MCP4822_FillSineDMA(dac_buffer, sizeof(dac_buffer)/sizeof(uint16_t), 0.1f, 1.0f, 1, MCP4822_CH_A);
   while(HAL_GPIO_ReadPin(B1_GPIO_Port, B1_Pin));
@@ -196,6 +217,8 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  memset((uint8_t *) adcBuffer, 0, sizeof(adcBuffer));
+  HAL_UART_Receive_IT(&huart2, &rx, 1);
   while (1)
   {
     /* USER CODE END WHILE */
@@ -307,7 +330,7 @@ static void MX_ADC1_Init(void)
   */
   sConfig.Channel = ADC_CHANNEL_1;
   sConfig.Rank = ADC_REGULAR_RANK_1;
-  sConfig.SamplingTime = ADC_SAMPLETIME_24CYCLES_5;
+  sConfig.SamplingTime = ADC_SAMPLETIME_2CYCLES_5;
   sConfig.SingleDiff = ADC_SINGLE_ENDED;
   sConfig.OffsetNumber = ADC_OFFSET_NONE;
   sConfig.Offset = 0;
@@ -320,6 +343,7 @@ static void MX_ADC1_Init(void)
   */
   sConfig.Channel = ADC_CHANNEL_2;
   sConfig.Rank = ADC_REGULAR_RANK_2;
+  sConfig.SamplingTime = ADC_SAMPLETIME_2CYCLES_5;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {
     Error_Handler();
@@ -329,6 +353,7 @@ static void MX_ADC1_Init(void)
   */
   sConfig.Channel = ADC_CHANNEL_15;
   sConfig.Rank = ADC_REGULAR_RANK_3;
+  sConfig.SamplingTime = ADC_SAMPLETIME_2CYCLES_5;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {
     Error_Handler();
@@ -444,7 +469,7 @@ static void MX_TIM6_Init(void)
   htim6.Instance = TIM6;
   htim6.Init.Prescaler = 79;
   htim6.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim6.Init.Period = 99;
+  htim6.Init.Period = 9;
   htim6.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim6) != HAL_OK)
   {
@@ -507,6 +532,9 @@ static void MX_DMA_Init(void)
   __HAL_RCC_DMA1_CLK_ENABLE();
 
   /* DMA interrupt init */
+  /* DMA1_Channel1_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Channel1_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel1_IRQn);
   /* DMA1_Channel3_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(DMA1_Channel3_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(DMA1_Channel3_IRQn);
@@ -553,7 +581,71 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+void StartAcquisition(void)
+{
+    adcFinished = 0;
 
+    memset((uint8_t *) adcBuffer, 0, sizeof(adcBuffer));
+    HAL_ADC_Start_DMA(&hadc1,
+                      (uint32_t *)adcBuffer,
+                      ADC_SAMPLES);
+
+    HAL_TIM_Base_Start(&htim6);
+}
+
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc)
+{
+    if (hadc == &hadc1)
+    {
+        HAL_TIM_Base_Stop(&htim6);
+        HAL_ADC_Stop_DMA(&hadc1);
+
+        adcFinished = 1;
+
+        const uint8_t msg[] = "DONE\n";
+        HAL_UART_Transmit(&huart2,
+                          (uint8_t *)msg,
+                          sizeof(msg) - 1,
+                          HAL_MAX_DELAY);
+    }
+}
+
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+{
+    if (huart == &huart2)
+    {
+        if (rx == '\n')
+        {
+            command[commandIndex] = '\0';
+
+            if (strcmp(command, "s") == 0)
+            {
+                StartAcquisition();
+            }
+            else if (strcmp(command, "r") == 0)
+            {
+                if (adcFinished)
+                {
+                    HAL_UART_Transmit(&huart2,
+                                      (uint8_t *)adcBuffer,
+                                      sizeof(adcBuffer),
+                                      HAL_MAX_DELAY);
+                }
+            }
+
+            commandIndex = 0;
+        }
+        else if (rx != '\r')
+        {
+            if (commandIndex < sizeof(command) - 1)
+            {
+                command[commandIndex++] = rx;
+            }
+        }
+
+        HAL_UART_Receive_IT(&huart2, &rx, 1);
+    }
+}
 /* USER CODE END 4 */
 
 /**
