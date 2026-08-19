@@ -1,0 +1,6 @@
+c:\users\german\documents\equipo_medicion_ensayo_celdas\firmware\drivers\stm32wbxx_hal_driver\inc\stm32wbxx_ll_rcc.h:1679:22:LL_RCC_LSE_SetDriveCapability	16	static
+C:/Users/German/Documents/equipo_medicion_ensayo_celdas/firmware/Core/Src/main.c:75:5:main	8	static
+C:/Users/German/Documents/equipo_medicion_ensayo_celdas/firmware/Core/Src/main.c:145:6:SystemClock_Config	112	static
+C:/Users/German/Documents/equipo_medicion_ensayo_celdas/firmware/Core/Src/main.c:213:6:PeriphCommonClock_Config	88	static
+C:/Users/German/Documents/equipo_medicion_ensayo_celdas/firmware/Core/Src/main.c:253:6:HAL_TIM_PeriodElapsedCallback	16	static
+C:/Users/German/Documents/equipo_medicion_ensayo_celdas/firmware/Core/Src/main.c:271:6:Error_Handler	4	static,ignoring_inline_asm

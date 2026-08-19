@@ -1,0 +1,2 @@
+c:\users\german\documents\equipo_medicion_ensayo_celdas\firmware\drivers\stm32wbxx_hal_driver\inc\stm32wbxx_ll_bus.h:539:22:LL_AHB2_GRP1_EnableClock	24	static
+C:/Users/German/Documents/equipo_medicion_ensayo_celdas/firmware/Core/Src/gpio.c:42:6:MX_GPIO_Init	32	static

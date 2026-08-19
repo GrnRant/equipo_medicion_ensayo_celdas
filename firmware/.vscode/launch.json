@@ -1,0 +1,32 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug OpenOCD",
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "openocd",
+            "cwd": "${workspaceFolder}",
+            "executable": "${command:cmake.launchTargetPath}", //or fixed file path: build/stm32h735g-dk-led.elf
+            "device": "STM32WB55RG",
+            "searchDir": [
+                "C:/Program Files/xpack-openocd-0.12.0-7/openocd/scripts"
+            ],
+            "configFiles": [
+                "interface/stlink.cfg",
+                "target/stm32wbx.cfg"
+            ],
+            //"rtos": "FreeRTOS",
+            "svdFile": "${workspaceFolder}/STM32WB55_CM4.svd",      //Path to SVD file to see registers
+            "liveWatch": {
+                "enabled": true,
+                "samplesPerSecond": 4
+            },
+            "runToEntryPoint": "main",
+            "showDevDebugOutput": "raw",
+            "gdbPath": "C:/ST/STM32CubeCLT/GNU-tools-for-STM32/bin/arm-none-eabi-gdb.exe",
+            "toolchainPrefix": "${config:cortex-debug.armToolchainPrefix}",
+            "objdumpPath": "${config:cortex-debug.objdumpPath}",
+        }
+    ]
+}

@@ -1,0 +1,5 @@
+c:\users\german\documents\equipo_medicion_ensayo_celdas\firmware\drivers\stm32wbxx_hal_driver\inc\stm32wbxx_ll_bus.h:744:22:LL_AHB3_GRP1_EnableClock	24	static
+c:\users\german\documents\equipo_medicion_ensayo_celdas\firmware\drivers\stm32wbxx_hal_driver\inc\stm32wbxx_ll_bus.h:798:22:LL_AHB3_GRP1_DisableClock	16	static
+C:/Users/German/Documents/equipo_medicion_ensayo_celdas/firmware/Core/Src/ipcc.c:30:6:MX_IPCC_Init	8	static
+C:/Users/German/Documents/equipo_medicion_ensayo_celdas/firmware/Core/Src/ipcc.c:51:6:HAL_IPCC_MspInit	16	static
+C:/Users/German/Documents/equipo_medicion_ensayo_celdas/firmware/Core/Src/ipcc.c:73:6:HAL_IPCC_MspDeInit	16	static

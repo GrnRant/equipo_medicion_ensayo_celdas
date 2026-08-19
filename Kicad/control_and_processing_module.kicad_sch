@@ -5631,6 +5631,16 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "Conectar a REF3333"
+		(exclude_from_sim no)
+		(at 278.13 115.824 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "a73924c6-6512-4bf0-a52c-64ed1082709e")
+	)
 	(junction
 		(at 247.65 96.52)
 		(diameter 0)

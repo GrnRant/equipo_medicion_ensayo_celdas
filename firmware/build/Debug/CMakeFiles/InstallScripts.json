@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/German/Documents/equipo_medicion_ensayo_celdas/firmware/build/Debug/cmake_install.cmake",
+		"C:/Users/German/Documents/equipo_medicion_ensayo_celdas/firmware/build/Debug/cmake/stm32cubemx/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

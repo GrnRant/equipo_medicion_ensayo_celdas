@@ -1,0 +1,182 @@
+Configuration	equipo_medicion_ensayo_celdas
+STM32CubeMX 	6.17.0
+Date	08/16/2026
+MCU	STM32WB55RGVx
+
+
+
+PERIPHERALS	MODES	FUNCTIONS	PINS
+ADC1	IN1 Single-ended	ADC1_IN1	PC0
+ADC1	IN2 Single-ended	ADC1_IN2	PC1
+ADC1	IN3 Single-ended	ADC1_IN3	PC2
+ADC1	IN4 Single-ended	ADC1_IN4	PC3
+ADC1	IN5 Single-ended	ADC1_IN5	PA0
+ADC1	IN6 Single-ended	ADC1_IN6	PA1
+ADC1	IN7 Single-ended	ADC1_IN7	PA2
+ADC1	IN8 Single-ended	ADC1_IN8	PA3
+ADC1	IN9 Single-ended	ADC1_IN9	PA4
+ADC1	IN10 Single-ended	ADC1_IN10	PA5
+ADC1	IN11 Single-ended	ADC1_IN11	PA6
+ADC1	IN12 Single-ended	ADC1_IN12	PA7
+ADC1	IN13 Single-ended	ADC1_IN13	PC4
+ADC1	IN14 Single-ended	ADC1_IN14	PC5
+ADC1	IN15 Single-ended	ADC1_IN15	PA8
+ADC1	Single-ended	ADC1_IN16	PA9
+I2C3	I2C	I2C3_SCL	PB10
+I2C3	I2C	I2C3_SDA	PB11
+RCC	Crystal/Ceramic Resonator	RCC_OSC_IN	OSC_IN
+RCC	Crystal/Ceramic Resonator	RCC_OSC_OUT	OSC_OUT
+RCC	Crystal/Ceramic Resonator	RCC_OSC32_IN	PC14-OSC32_IN
+RCC	Crystal/Ceramic Resonator	RCC_OSC32_OUT	PC15-OSC32_OUT
+RF	Activate RF1	RF_RF1	RF1
+RTC	Activate Clock Source	RTC_VS_RTC_Activate	VP_RTC_VS_RTC_Activate
+RTC	Internal WakeUp	RTC_VS_RTC_WakeUp_intern	VP_RTC_VS_RTC_WakeUp_intern
+SPI1	Transmit Only Master	SPI1_MOSI	PB5
+SPI1	Transmit Only Master	SPI1_SCK	PB3
+SPI2	Full-Duplex Master	SPI2_MISO	PB14
+SPI2	Full-Duplex Master	SPI2_MOSI	PB15
+SPI2	Full-Duplex Master	SPI2_SCK	PB13
+SPI2	Hardware NSS Output Signal	SPI2_NSS	PB9
+SYS	TIM17	SYS_VS_tim17	VP_SYS_VS_tim17
+USB	Device (FS)	USB_DM	PA11
+USB	Device (FS)	USB_DP	PA12
+
+
+
+Pin Nb	PINs	FUNCTIONs	LABELs
+3	PC14-OSC32_IN	RCC_OSC32_IN	
+4	PC15-OSC32_OUT	RCC_OSC32_OUT	
+7	PB9	SPI2_NSS	
+9	PC0	ADC1_IN1	
+10	PC1	ADC1_IN2	
+11	PC2	ADC1_IN3	
+12	PC3	ADC1_IN4	
+15	PA0	ADC1_IN5	
+16	PA1	ADC1_IN6	
+17	PA2	ADC1_IN7	
+18	PA3	ADC1_IN8	
+19	PA4	ADC1_IN9	
+20	PA5	ADC1_IN10	
+21	PA6	ADC1_IN11	
+22	PA7	ADC1_IN12	
+23	PA8	ADC1_IN15	
+24	PA9	ADC1_IN16	
+25	PC4	ADC1_IN13	
+26	PC5	ADC1_IN14	
+28	PB10	I2C3_SCL	
+29	PB11	I2C3_SDA	
+31	RF1	RF_RF1	
+34	OSC_OUT	RCC_OSC_OUT	
+35	OSC_IN	RCC_OSC_IN	
+47	PB13	SPI2_SCK	
+48	PB14	SPI2_MISO	
+49	PB15	SPI2_MOSI	
+52	PA11	USB_DM	
+53	PA12	USB_DP	
+59	PC11	GPIO_Output	MCP4_CS
+60	PC12	GPIO_Output	MCP3_CS
+61	PD0	GPIO_Output	MCP2_CS
+62	PD1	GPIO_Output	MCP1_CS
+63	PB3	SPI1_SCK	
+65	PB5	SPI1_MOSI	
+PERIPHERALS	MODES	FUNCTIONS	PINS
+ADC1	IN1 Single-ended	ADC1_IN1	PC0
+ADC1	IN2 Single-ended	ADC1_IN2	PC1
+ADC1	IN3 Single-ended	ADC1_IN3	PC2
+ADC1	IN4 Single-ended	ADC1_IN4	PC3
+ADC1	IN5 Single-ended	ADC1_IN5	PA0
+ADC1	IN6 Single-ended	ADC1_IN6	PA1
+ADC1	IN7 Single-ended	ADC1_IN7	PA2
+ADC1	IN8 Single-ended	ADC1_IN8	PA3
+ADC1	IN9 Single-ended	ADC1_IN9	PA4
+ADC1	IN10 Single-ended	ADC1_IN10	PA5
+ADC1	IN11 Single-ended	ADC1_IN11	PA6
+ADC1	IN12 Single-ended	ADC1_IN12	PA7
+ADC1	IN13 Single-ended	ADC1_IN13	PC4
+ADC1	IN14 Single-ended	ADC1_IN14	PC5
+ADC1	IN15 Single-ended	ADC1_IN15	PA8
+ADC1	Single-ended	ADC1_IN16	PA9
+I2C3	I2C	I2C3_SCL	PB10
+I2C3	I2C	I2C3_SDA	PB11
+RCC	Crystal/Ceramic Resonator	RCC_OSC_IN	OSC_IN
+RCC	Crystal/Ceramic Resonator	RCC_OSC_OUT	OSC_OUT
+RCC	Crystal/Ceramic Resonator	RCC_OSC32_IN	PC14-OSC32_IN
+RCC	Crystal/Ceramic Resonator	RCC_OSC32_OUT	PC15-OSC32_OUT
+RF	Activate RF1	RF_RF1	RF1
+RTC	Activate Clock Source	RTC_VS_RTC_Activate	VP_RTC_VS_RTC_Activate
+RTC	Internal WakeUp	RTC_VS_RTC_WakeUp_intern	VP_RTC_VS_RTC_WakeUp_intern
+SPI1	Transmit Only Master	SPI1_MOSI	PB5
+SPI1	Transmit Only Master	SPI1_SCK	PB3
+SPI2	Full-Duplex Master	SPI2_MISO	PB14
+SPI2	Full-Duplex Master	SPI2_MOSI	PB15
+SPI2	Full-Duplex Master	SPI2_SCK	PB13
+SPI2	Hardware NSS Output Signal	SPI2_NSS	PB9
+SYS	TIM17	SYS_VS_tim17	VP_SYS_VS_tim17
+USB	Device (FS)	USB_DM	PA11
+USB	Device (FS)	USB_DP	PA12
+
+
+
+Pin Nb	PINs	FUNCTIONs	LABELs
+3	PC14-OSC32_IN	RCC_OSC32_IN	
+4	PC15-OSC32_OUT	RCC_OSC32_OUT	
+7	PB9	SPI2_NSS	
+9	PC0	ADC1_IN1	
+10	PC1	ADC1_IN2	
+11	PC2	ADC1_IN3	
+12	PC3	ADC1_IN4	
+15	PA0	ADC1_IN5	
+16	PA1	ADC1_IN6	
+17	PA2	ADC1_IN7	
+18	PA3	ADC1_IN8	
+19	PA4	ADC1_IN9	
+20	PA5	ADC1_IN10	
+21	PA6	ADC1_IN11	
+22	PA7	ADC1_IN12	
+23	PA8	ADC1_IN15	
+24	PA9	ADC1_IN16	
+25	PC4	ADC1_IN13	
+26	PC5	ADC1_IN14	
+28	PB10	I2C3_SCL	
+29	PB11	I2C3_SDA	
+31	RF1	RF_RF1	
+34	OSC_OUT	RCC_OSC_OUT	
+35	OSC_IN	RCC_OSC_IN	
+47	PB13	SPI2_SCK	
+48	PB14	SPI2_MISO	
+49	PB15	SPI2_MOSI	
+52	PA11	USB_DM	
+53	PA12	USB_DP	
+59	PC11	GPIO_Output	MCP4_CS
+60	PC12	GPIO_Output	MCP3_CS
+61	PD0	GPIO_Output	MCP2_CS
+62	PD1	GPIO_Output	MCP1_CS
+63	PB3	SPI1_SCK	
+65	PB5	SPI1_MOSI	
+
+
+
+SOFTWARE PROJECT
+
+Project Settings : 
+Project Name : equipo_medicion_ensayo_celdas
+Project Folder : C:\Users\German\Documents\equipo_medicion_ensayo_celdas\firmware
+Toolchain / IDE : CMake
+Firmware Package Name and Version : STM32Cube FW_WB V1.24.0
+
+
+Code Generation Settings : 
+STM32Cube MCU packages and embedded software packs : Copy only the necessary library files
+Generate peripheral initialization as a pair of '.c/.h' files per peripheral : Yes
+Backup previously generated files when re-generating : No
+Delete previously generated files when not re-generated : Yes
+Set all free pins as analog (to optimize the power consumption) : No
+
+
+Toolchains Settings : 
+Compiler Optimizations : 
+
+
+
+
+
