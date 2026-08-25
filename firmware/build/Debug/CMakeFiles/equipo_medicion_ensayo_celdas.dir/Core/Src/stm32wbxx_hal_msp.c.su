@@ -1,2 +1,0 @@
-c:\users\german\documents\equipo_medicion_ensayo_celdas\firmware\drivers\stm32wbxx_hal_driver\inc\stm32wbxx_ll_bus.h:744:22:LL_AHB3_GRP1_EnableClock	24	static
-C:/Users/German/Documents/equipo_medicion_ensayo_celdas/firmware/Core/Src/stm32wbxx_hal_msp.c:62:6:HAL_MspInit	8	static

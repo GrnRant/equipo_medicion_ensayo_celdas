@@ -1,5 +1,0 @@
-c:\users\german\documents\equipo_medicion_ensayo_celdas\firmware\drivers\stm32wbxx_hal_driver\inc\stm32wbxx_ll_bus.h:539:22:LL_AHB2_GRP1_EnableClock	24	static
-c:\users\german\documents\equipo_medicion_ensayo_celdas\firmware\drivers\stm32wbxx_hal_driver\inc\stm32wbxx_ll_bus.h:597:22:LL_AHB2_GRP1_DisableClock	16	static
-C:/Users/German/Documents/equipo_medicion_ensayo_celdas/firmware/Core/Src/adc.c:30:6:MX_ADC1_Init	32	static
-C:/Users/German/Documents/equipo_medicion_ensayo_celdas/firmware/Core/Src/adc.c:83:6:HAL_ADC_MspInit	40	static
-C:/Users/German/Documents/equipo_medicion_ensayo_celdas/firmware/Core/Src/adc.c:134:6:HAL_ADC_MspDeInit	16	static

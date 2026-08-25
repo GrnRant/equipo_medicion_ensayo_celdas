@@ -83,6 +83,8 @@ extern uint32_t SystemCoreClock;
 /* Defaults to size_t for backward compatibility, but can be changed
    if lengths will always be less than the number of bytes in a size_t. */
 #define configMESSAGE_BUFFER_LENGTH_TYPE         size_t
+
+#define configCOMMAND_INT_MAX_OUTPUT_SIZE    256
 /* USER CODE END MESSAGE_BUFFER_LENGTH_TYPE */
 
 /* Co-routine definitions. */

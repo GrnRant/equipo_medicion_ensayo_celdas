@@ -1,7 +1,0 @@
-c:\users\german\documents\equipo_medicion_ensayo_celdas\firmware\drivers\stm32wbxx_hal_driver\inc\stm32wbxx_ll_rcc.h:2883:22:LL_RCC_EnableRTC	4	static
-c:\users\german\documents\equipo_medicion_ensayo_celdas\firmware\drivers\stm32wbxx_hal_driver\inc\stm32wbxx_ll_rcc.h:2893:22:LL_RCC_DisableRTC	4	static
-c:\users\german\documents\equipo_medicion_ensayo_celdas\firmware\drivers\stm32wbxx_hal_driver\inc\stm32wbxx_ll_bus.h:939:22:LL_APB1_GRP1_EnableClock	24	static
-c:\users\german\documents\equipo_medicion_ensayo_celdas\firmware\drivers\stm32wbxx_hal_driver\inc\stm32wbxx_ll_bus.h:1038:22:LL_APB1_GRP1_DisableClock	16	static
-C:/Users/German/Documents/equipo_medicion_ensayo_celdas/firmware/Core/Src/rtc.c:30:6:MX_RTC_Init	8	static
-C:/Users/German/Documents/equipo_medicion_ensayo_celdas/firmware/Core/Src/rtc.c:68:6:HAL_RTC_MspInit	96	static
-C:/Users/German/Documents/equipo_medicion_ensayo_celdas/firmware/Core/Src/rtc.c:100:6:HAL_RTC_MspDeInit	16	static
