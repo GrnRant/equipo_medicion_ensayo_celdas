@@ -5,14 +5,14 @@ import matplotlib.pyplot as plt
 PORT = "COM6"
 BAUD = 115200
 
-FS = 100000
+FS = 1000000
 CHANNELS = 3
-SECONDS = 0.1
+SECONDS = 0.01
 
 N = int(FS * SECONDS * CHANNELS)
 BYTES_TO_READ = N * 2
 
-VREF = 3.300
+VREF = 3.320
 
 
 def read_exactly(ser, n):
@@ -130,7 +130,7 @@ ch1_filtered = lowpass_filter(
 # Tiempo en ms
 # ---------------------------------------------------------
 
-t_ms = np.arange(len(ch1)) / FS * 1000.0
+t_ms = np.arange(len(ch1)) / FS * 2000.0
 
 
 # =========================================================
@@ -156,16 +156,16 @@ plt.tight_layout()
 # PLOT 2 - CH1 filtrado
 # =========================================================
 
-plt.figure(figsize=(12, 6))
+# plt.figure(figsize=(12, 6))
 
-plt.plot(t_ms, ch1_filtered, label="CH1 filtrado")
+# plt.plot(t_ms, ch1_filtered, label="CH1 filtrado")
 
-plt.xlabel("Tiempo [ms]")
-plt.ylabel("Tensión [mV]")
-plt.title(f"CH1 - Pasabajos {CUTOFF / 1000:.1f} kHz")
-plt.grid(True)
-plt.legend()
+# plt.xlabel("Tiempo [ms]")
+# plt.ylabel("Tensión [mV]")
+# plt.title(f"CH1 - Pasabajos {CUTOFF / 1000:.1f} kHz")
+# plt.grid(True)
+# plt.legend()
 
-plt.tight_layout()
+# plt.tight_layout()
 
 plt.show()

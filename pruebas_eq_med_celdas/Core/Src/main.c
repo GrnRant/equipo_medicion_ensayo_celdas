@@ -35,9 +35,9 @@ typedef enum {
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define SAMPLE_RATE     100000
+#define SAMPLE_RATE     1000000
 #define CHANNELS        3
-#define RECORD_TIME_MS  100
+#define RECORD_TIME_MS  10
 
 #define ADC_SAMPLES     ((SAMPLE_RATE * RECORD_TIME_MS / 1000) * CHANNELS)
 
@@ -62,7 +62,6 @@ DMA_HandleTypeDef hdma_adc1;
 SPI_HandleTypeDef hspi1;
 DMA_HandleTypeDef hdma_spi1_tx;
 
-TIM_HandleTypeDef htim2;
 TIM_HandleTypeDef htim6;
 
 UART_HandleTypeDef huart2;
@@ -75,7 +74,6 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_DMA_Init(void);
 static void MX_USART2_UART_Init(void);
-static void MX_TIM2_Init(void);
 static void MX_SPI1_Init(void);
 static void MX_ADC1_Init(void);
 static void MX_TIM6_Init(void);
@@ -120,6 +118,52 @@ void MCP4822_FillSineDMA(uint16_t *buffer,
         buffer[i] = config | (code & 0x0FFF);
     }
     HAL_SPI_Transmit_DMA(&hspi1, (uint8_t*)buffer, size);
+}
+
+void MCP4821_FillSineDMA(uint16_t *buffer,
+                         uint32_t size,
+                         float amplitude_volts,
+                         float offset_volts,
+                         uint8_t ga)
+{
+    if (!buffer || size == 0) return;
+
+    float fullscale = ga ? MCP482X_VREF : (2.0f * MCP482X_VREF);
+
+    // Limitar amplitud para no saturar
+    float max_amp = offset_volts;
+
+    if ((fullscale - offset_volts) < max_amp)
+        max_amp = fullscale - offset_volts;
+
+    if (amplitude_volts > max_amp)
+        amplitude_volts = max_amp;
+
+    uint16_t config = 0;
+
+    config |= (1 << 14);             // BUF
+    config |= (ga ? (1 << 13) : 0);  // GA
+    config |= (1 << 12);             // SHDN
+
+    for (uint32_t i = 0; i < size; i++)
+    {
+        float phase = 2.0f * M_PI * ((float)i / (float)size);
+        float s = sinf(phase);
+
+        float voltage = offset_volts + s * amplitude_volts;
+
+        if (voltage < 0.0f)
+            voltage = 0.0f;
+
+        if (voltage > fullscale)
+            voltage = fullscale;
+
+        uint16_t code = (uint16_t)((voltage / fullscale) * 4095.0f);
+
+        buffer[i] = config | (code & 0x0FFF);
+    }
+
+    HAL_SPI_Transmit_DMA(&hspi1, (uint8_t *)buffer, size);
 }
 
 // --- Set voltage function ---
@@ -184,7 +228,6 @@ int main(void)
   MX_GPIO_Init();
   MX_DMA_Init();
   MX_USART2_UART_Init();
-  MX_TIM2_Init();
   MX_SPI1_Init();
   MX_ADC1_Init();
   MX_TIM6_Init();
@@ -208,17 +251,17 @@ int main(void)
 //  HAL_SPI_Transmit_DMA(&hspi1, (uint8_t *) dac_buffer, sizeof(dac_buffer)/sizeof(uint16_t));
 
 //  MCP4822_SetVoltage(MCP4822_CH_A , 2.0);
-  MCP4822_SetVoltage(MCP4822_CH_B , 2.5);
+  MCP4822_SetVoltage(MCP4822_CH_B , 1.88); // 2.5 => 2.75 - 1.9 => 2.108 // VREF = 1.07 * VB + 0.075 // VB = 0.935 * VREF - 0.07 // VBAT = 2.01 * VREF
   HAL_Delay(100);
-  MCP4822_FillSineDMA(dac_buffer, sizeof(dac_buffer)/sizeof(uint16_t), 0.1f, 1.0f, 1, MCP4822_CH_A);
-  while(HAL_GPIO_ReadPin(B1_GPIO_Port, B1_Pin));
-  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_8, GPIO_PIN_SET);
+  MCP4822_FillSineDMA(dac_buffer, sizeof(dac_buffer)/sizeof(uint16_t), 0.05f,1.0f, 1, MCP4822_CH_A);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   memset((uint8_t *) adcBuffer, 0, sizeof(adcBuffer));
   HAL_UART_Receive_IT(&huart2, &rx, 1);
+  while(HAL_GPIO_ReadPin(B1_GPIO_Port, B1_Pin));
+  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_8, GPIO_PIN_SET);
   while (1)
   {
     /* USER CODE END WHILE */
@@ -343,7 +386,6 @@ static void MX_ADC1_Init(void)
   */
   sConfig.Channel = ADC_CHANNEL_2;
   sConfig.Rank = ADC_REGULAR_RANK_2;
-  sConfig.SamplingTime = ADC_SAMPLETIME_12CYCLES_5;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {
     Error_Handler();
@@ -353,7 +395,6 @@ static void MX_ADC1_Init(void)
   */
   sConfig.Channel = ADC_CHANNEL_15;
   sConfig.Rank = ADC_REGULAR_RANK_3;
-  sConfig.SamplingTime = ADC_SAMPLETIME_12CYCLES_5;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {
     Error_Handler();
@@ -405,51 +446,6 @@ static void MX_SPI1_Init(void)
 }
 
 /**
-  * @brief TIM2 Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_TIM2_Init(void)
-{
-
-  /* USER CODE BEGIN TIM2_Init 0 */
-
-  /* USER CODE END TIM2_Init 0 */
-
-  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
-  TIM_MasterConfigTypeDef sMasterConfig = {0};
-
-  /* USER CODE BEGIN TIM2_Init 1 */
-
-  /* USER CODE END TIM2_Init 1 */
-  htim2.Instance = TIM2;
-  htim2.Init.Prescaler = 80-1;
-  htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim2.Init.Period = 9;
-  htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
-  htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
-  if (HAL_TIM_Base_Init(&htim2) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
-  if (HAL_TIM_ConfigClockSource(&htim2, &sClockSourceConfig) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  sMasterConfig.MasterOutputTrigger = TIM_TRGO_UPDATE;
-  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
-  if (HAL_TIMEx_MasterConfigSynchronization(&htim2, &sMasterConfig) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN TIM2_Init 2 */
-
-  /* USER CODE END TIM2_Init 2 */
-
-}
-
-/**
   * @brief TIM6 Initialization Function
   * @param None
   * @retval None
@@ -467,7 +463,7 @@ static void MX_TIM6_Init(void)
 
   /* USER CODE END TIM6_Init 1 */
   htim6.Instance = TIM6;
-  htim6.Init.Prescaler = 79;
+  htim6.Init.Prescaler = 7;
   htim6.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim6.Init.Period = 9;
   htim6.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
