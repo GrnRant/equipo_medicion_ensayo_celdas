@@ -31,17 +31,17 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  13 .debug_rnglists 000015f6  00000000  00000000  00029ea0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_macro  000242cc  00000000  00000000  0002b496  2**0
+ 14 .debug_macro  000242d8  00000000  00000000  0002b496  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_line   00019e7c  00000000  00000000  0004f762  2**0
+ 15 .debug_line   00019e7c  00000000  00000000  0004f76e  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_str    000f1245  00000000  00000000  000695de  2**0
+ 16 .debug_str    000f126c  00000000  00000000  000695ea  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .comment      00000043  00000000  00000000  0015a823  2**0
+ 17 .comment      00000043  00000000  00000000  0015a856  2**0
                   CONTENTS, READONLY
- 18 .debug_frame  00007cc0  00000000  00000000  0015a868  2**2
+ 18 .debug_frame  00007cc0  00000000  00000000  0015a89c  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_line_str 0000007f  00000000  00000000  00162528  2**0
+ 19 .debug_line_str 0000007f  00000000  00000000  0016255c  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -2208,17 +2208,17 @@ static void MX_GPIO_Init(void)
  8001336:	f04f 4090 	mov.w	r0, #1207959552	@ 0x48000000
  800133a:	f002 fa8b 	bl	8003854 <HAL_GPIO_Init>
 
-  /*Configure GPIO pin : PD1 */
-  GPIO_InitStruct.Pin = GPIO_PIN_1;
+  /*Configure GPIO pin : SW1_Pin */
+  GPIO_InitStruct.Pin = SW1_Pin;
  800133e:	2302      	movs	r3, #2
  8001340:	607b      	str	r3, [r7, #4]
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
  8001342:	2300      	movs	r3, #0
  8001344:	60bb      	str	r3, [r7, #8]
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
- 8001346:	2300      	movs	r3, #0
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+ 8001346:	2301      	movs	r3, #1
  8001348:	60fb      	str	r3, [r7, #12]
-  HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
+  HAL_GPIO_Init(SW1_GPIO_Port, &GPIO_InitStruct);
  800134a:	1d3b      	adds	r3, r7, #4
  800134c:	4619      	mov	r1, r3
  800134e:	4804      	ldr	r0, [pc, #16]	@ (8001360 <MX_GPIO_Init+0x98>)

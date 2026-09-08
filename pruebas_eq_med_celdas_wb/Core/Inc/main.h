@@ -71,6 +71,8 @@ void Error_Handler(void);
 #define JTMS_GPIO_Port GPIOA
 #define JTCK_Pin GPIO_PIN_14
 #define JTCK_GPIO_Port GPIOA
+#define SW1_Pin GPIO_PIN_1
+#define SW1_GPIO_Port GPIOD
 #define JTDO_Pin GPIO_PIN_3
 #define JTDO_GPIO_Port GPIOB
 
