@@ -26,7 +26,7 @@
             "showDevDebugOutput": "raw",
             "gdbPath": "C:/ST/STM32CubeCLT/GNU-tools-for-STM32/bin/arm-none-eabi-gdb.exe",
             "toolchainPrefix": "${config:cortex-debug.armToolchainPrefix}",
-            "objdumpPath": "${config:cortex-debug.objdumpPath}",
+            //"objdumpPath": "${config:cortex-debug.objdumpPath}",
         }
     ]
 }

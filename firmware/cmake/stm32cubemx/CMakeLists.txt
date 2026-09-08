@@ -12,6 +12,7 @@ set(MX_Defines_Syms
 set(MX_Include_Dirs
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Core/Inc
     ${CMAKE_CURRENT_SOURCE_DIR}/../../STM32_WPAN/App
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../STM32_WPAN/Services
     ${CMAKE_CURRENT_SOURCE_DIR}/../../USB_Device/App
     ${CMAKE_CURRENT_SOURCE_DIR}/../../USB_Device/Target
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/STM32WBxx_HAL_Driver/Inc
@@ -40,6 +41,8 @@ set(MX_Include_Dirs
 
 # STM32CubeMX generated application sources
 set(MX_Application_Src
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../STM32_WPAN/App/app_ble.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../STM32_WPAN/Services/ble_com_svc.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../STM32_WPAN/Target/hw_ipcc.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../USB_Device/App/usb_device.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../USB_Device/App/usbd_desc.c
@@ -153,7 +156,11 @@ set(MX_LINK_DIRS
 set(MX_LINK_LIBS 
     STM32_Drivers
     ${TOOLCHAIN_LINK_LIBRARIES}
-    USB_Device_Library	Utilities	FreeRTOS	STM32_WPAN	
+    USB_Device_Library
+	Utilities
+	FreeRTOS
+	STM32_WPAN
+	
 )
 # Interface library for includes and symbols
 add_library(stm32cubemx INTERFACE)

@@ -37,7 +37,11 @@ extern "C" {
 /* Exported types ------------------------------------------------------------*/
 
 /* USER CODE BEGIN ET */
+//! Name of device. Will be included in the advertising data.
+#define DEVICE_CONFIGURATION_BLE_NAME 				"BAT-TESTER"
 
+//! Device name max length. Is the length of the name plus the macro that indicates the name type.
+#define DEVICE_CONFIGURATION_BLE_NAME_MAX_LENGTH 	(sizeof(DEVICE_CONFIGURATION_BLE_NAME) + 1 )
 /* USER CODE END ET */
 
 /* Exported constants --------------------------------------------------------*/

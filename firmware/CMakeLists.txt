@@ -69,3 +69,12 @@ target_link_libraries(${CMAKE_PROJECT_NAME}
     # Add user defined libraries
     ${APP_TARGETS}
 )
+
+find_program(ARM_OBJCOPY arm-none-eabi-objcopy REQUIRED)
+
+add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+    COMMAND ${CMAKE_OBJCOPY}
+            -O binary
+            $<TARGET_FILE:${PROJECT_NAME}>
+            ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}.bin
+)
