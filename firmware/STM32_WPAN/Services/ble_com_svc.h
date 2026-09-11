@@ -99,7 +99,7 @@ typedef struct sServiceUARTContext
  * @brief  UART service initialization
  *
  */
-void Service_UART_Init( void );
+void service_ble_com_init( void );
 
 /*! Function to update the characteristic value
  * @brief  	   Check if the characteristic is valid, and update BLE stack.
@@ -109,7 +109,7 @@ void Service_UART_Init( void );
  * @return 	   value of type tBleStatus, BLE_STATUS_SUCCESS if update
  * 		       successfully. Reference ble_def.h
  */
-tBleStatus Service_UART_Update_Characteristic(								\
+tBleStatus service_ble_com_update_characteristic(								\
 										uint16_t characteristic, 			\
 										const uint8_t *pData, 				\
 										uint8_t nData );
@@ -120,6 +120,6 @@ tBleStatus Service_UART_Update_Characteristic(								\
  * @param[in]  pData Pointer to buffer with the value to update
  * @param[in]  nData Data length in bytes
  */
-void Service_UART_Test_Echo(const uint8_t *pData, uint8_t nData );
+void service_ble_com_test(const uint8_t *pData, uint8_t nData );
 
 #endif /* __SERVICE_UART_H__ */

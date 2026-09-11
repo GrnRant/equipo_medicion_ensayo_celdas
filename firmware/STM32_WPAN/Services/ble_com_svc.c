@@ -1,4 +1,4 @@
-/*! @file Service_UART.c
+/*! @file ble_com_svc.c
  * @brief Implementation of UART service, with initialization and update functions.
  *
  *
@@ -25,7 +25,7 @@ PLACE_IN_SECTION("BLE_DRIVER_CONTEXT") static tServiceUARTContext SUARTContext;
  * 				  SVCCTL_EvtAckFlowEnable, if flow enabled
  * 				  SVCCTL_EvtAckFlowDisable, if flow disable
  */
-static SVCCTL_EvtAckStatus_t Service_UART_Handler_Event(void *event){
+static SVCCTL_EvtAckStatus_t service_ble_com_handler_event(void *event){
 
 	SVCCTL_EvtAckStatus_t return_value;
 	hci_event_pckt *event_pckt;
@@ -46,13 +46,13 @@ static SVCCTL_EvtAckStatus_t Service_UART_Handler_Event(void *event){
 		return_value = SVCCTL_EvtAckFlowEnable;
 
 		// TX interruption management
-		Service_UART_Update_Characteristic(									\
+		service_ble_com_update_characteristic(									\
 										SERVICE_UART_UART_RX, 				\
 										attribute_modified->Attr_Data,		\
 										attribute_modified->Attr_Data_Length);
 
 		//Echo test
-		Service_UART_Test_Echo(												\
+		service_ble_com_test(												\
 										attribute_modified->Attr_Data,		\
 										attribute_modified->Attr_Data_Length);
 	}
@@ -66,12 +66,12 @@ static SVCCTL_EvtAckStatus_t Service_UART_Handler_Event(void *event){
  * @brief  UART service initialization
  *
  */
-void Service_UART_Init( void ){
+void service_ble_com_init( void ){
 	
 	Char_UUID_t  uuid;
 	tBleStatus result;
 
- 	SVCCTL_RegisterSvcHandler(Service_UART_Handler_Event);
+ 	SVCCTL_RegisterSvcHandler(service_ble_com_handler_event);
 
 	memset ( &SUARTContext, 0, sizeof(tServiceUARTContext) );
 
@@ -157,7 +157,7 @@ void Service_UART_Init( void ){
  * @return 	   value of type tBleStatus, BLE_STATUS_SUCCESS if update
  * 		       successfully. Reference ble_def.h
  */
-tBleStatus Service_UART_Update_Characteristic(								\
+tBleStatus service_ble_com_update_characteristic(								\
 										uint16_t characteristic, 			\
 										const uint8_t *pData, 				\
 										uint8_t nData ){
@@ -206,13 +206,13 @@ tBleStatus Service_UART_Update_Characteristic(								\
  * @param[in]  pData Pointer to buffer with the value to update
  * @param[in]  nData Data length in bytes
  */
-void Service_UART_Test_Echo(const uint8_t *pData, uint8_t nData )
+void service_ble_com_test(const uint8_t *pData, uint8_t nData )
 {
 	if( NULL != pData && nData < SERVICE_UART_UART_TX_LONG_MAX )
 	{
 
 		//Send data
-		Service_UART_Update_Characteristic(								\
+		service_ble_com_update_characteristic(								\
 												SERVICE_UART_UART_TX, 	\
 												pData,					\
 												nData);
