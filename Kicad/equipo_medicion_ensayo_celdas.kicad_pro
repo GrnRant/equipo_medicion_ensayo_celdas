@@ -693,7 +693,7 @@
         "uuid": "3a28fce2-eb35-4866-9328-426b80276fd9"
       }
     ],
-    "used_designators": "",
+    "used_designators": "U13-30,U34-37,K8-10,C4-14,C54-58,J3-4,J9-12,R53,R56-129,R131-136,R145-149,D11-19,#PWR8,#PWR11-18,Q12-29,RV4,RV6-13",
     "variants": []
   },
   "sheets": [
@@ -718,20 +718,24 @@
       "CELL_TESTER_MODULE"
     ],
     [
-      "4fa4dc0f-1a57-4a76-b74f-da7bb4eadf20",
+      "2707d2ba-c005-4ad4-ae41-f4739b29874a",
       "CELL_TESTER_MODULE1"
     ],
     [
-      "dba44c2c-223c-4043-a475-26e1158318d1",
+      "2f1be80a-0631-4702-ada3-10639455aa5e",
       "CELL_TESTER_MODULE2"
     ],
     [
-      "3a5891b4-3d5b-4d25-91e3-ba96fc4a14ab",
+      "73c239ce-d945-40c9-a7ed-c7bd64f83312",
       "CELL_TESTER_MODULE3"
     ],
     [
       "4ab52f82-3340-4681-9016-0e0ffe451c1a",
       "SPLIT_POWER_SUPPLY1"
+    ],
+    [
+      "2714af22-bbff-492d-a95d-262601e9a40e",
+      "DACS_MODULE"
     ]
   ],
   "text_variables": {},
